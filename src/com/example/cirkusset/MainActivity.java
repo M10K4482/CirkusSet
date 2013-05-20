@@ -23,6 +23,8 @@ public class MainActivity extends Activity {
 	private GridView gr; //Skapa en referens (gridview)
 	private ImageAdapter im; //Skapa en referens (im) så att man kan komma åt ImageAdapter klassen
 	private CardsOnPad onPad; //Referens till de kort som skall vara på paddan 
+	private int counter;
+	private static int PRESSED_LIMIT=3;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,43 @@ public class MainActivity extends Activity {
 		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
 			
 		public void onItemClick(AdapterView<?> parent, View v, int position, long id) { //Denna kör igång när man klickat något och använder sig av en adaptor
+			counter = 0;
 			Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show(); //En toast med info om position
 			Card ca = onPad.getCard(position); //Hämta kortet som klickats via dess position på brädet
 			ca.pressCard(); //Tryck in kortet och byt dess bild
-			Log.i("Cirkus","Image: "+ ca.getCardImage()); //
+			Log.i("Cirkus","Image: "+ ca.getCardImage());
+			
+			for(int i = 0; i < onPad.getCards().size(); i++){
+				
+				Log.i("Limit","Inne i första loopen");
+				
+				if(onPad.getCard(i).isPressed()==true){
+					
+					counter = counter + 1;
+					Log.i("Limit","Inne i andra loopen"+counter);
+					
+					if(counter > PRESSED_LIMIT){
+						
+						Log.i("Limit","Inne i tredje loopen"); 
+						
+						for(int a = 0; a < onPad.getCards().size(); a++){
+							if(onPad.getCard(a).isPressed()==true){
+								
+								onPad.getCard(a).pressCard();
+								
+							}
+						}
+						
+						im.notifyDataSetChanged();
+						
+					}
+					
+				}
+				
+			}
+			
 			im.notifyDataSetChanged();//Efter att ett kort klickas ska spelplanen ritas om för att visa dennna förändring
+			
 			}
 		});
 		

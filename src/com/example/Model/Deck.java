@@ -11,28 +11,30 @@ public class Deck {
 	public Deck() {
 		//Skapa alla korten
 		myDeck = new ArrayList<Card>();
-		//Detta kommer bli en lite lång lista men så länge funkar det.
+		//Detta kommer bli en lite lï¿½ng lista men sï¿½ lï¿½nge funkar det.
 		//myDeck = new ArrayList<Card>();
-		Card c = new Card(R.drawable.seal,R.drawable.seal_red,Card.CardFill.CLEAN); //Ett kort (alltså ett objekt av typen Card) skapas
+		Card c = new Card(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
 		myDeck.add(c);
-		myDeck.add(new Card(R.drawable.lion,R.drawable.lion_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.ape,R.drawable.ape_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.seal,R.drawable.seal_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.lion,R.drawable.lion_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.ape,R.drawable.ape_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.seal,R.drawable.seal_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.lion,R.drawable.lion_red,Card.CardFill.CLEAN));
-		myDeck.add(new Card(R.drawable.ape,R.drawable.ape_red,Card.CardFill.CLEAN));
-		//OSV för alla kort
+		myDeck.add(new Card(R.drawable.greenlejonstreck2,R.drawable.green_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		myDeck.add(new Card(R.drawable.greenlejonstreck3,R.drawable.green_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		
+		myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
+		myDeck.add(new Card(R.drawable.turkossalkort2,R.drawable.blue_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
+		myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		
+		myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
+		myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
+		myDeck.add(new Card(R.drawable.rosalejonprickar1,R.drawable.pink_dots_lion1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
+		//OSV fï¿½r alla kort
 	}
 	
-	public void shuffle(){ //Här kommer korten blandas så småningom
+	public void shuffle(){ //Hï¿½r kommer korten blandas sï¿½ smï¿½ningom
 		//Shuffle the cards
 	}
 	
 	public ArrayList<Card> getNbrOfCards(int nbr){
-		//Här lägger man till och tar bort kort från brädet
-		//Lägger först till kort
+		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
+		//Lï¿½gger fï¿½rst till kort
 		ArrayList<Card> c = new ArrayList<Card>();
 		c.add(myDeck.get(0));
 		c.add(myDeck.get(1));
@@ -44,7 +46,7 @@ public class Deck {
 		 c.add(myDeck.get(7));
 		 c.add(myDeck.get(8));
 		 
-		//Ta bort dem från ursprungliga
+		//Ta bort dem frï¿½n ursprungliga
 		myDeck.remove(8);
 		myDeck.remove(7);
 		myDeck.remove(6);

@@ -2,6 +2,8 @@ package com.example.Model;
 
 import java.util.ArrayList;
 
+import android.util.Log;
+
 
 //I denna klassen skall allt som har med det som finns på plattan ligga
 public class CardsOnPad {
@@ -9,6 +11,7 @@ public class CardsOnPad {
 	private static int NBR_OF_CARDS=9; //Antalet kort som ska finnas på brädet
 	private Deck deck; //referens till kortleken
 	private ArrayList<Card> onHand; //En array för alla korten som ska finnas på brädet
+	private ArrayList<Card> pressedCards;
 	
 		public CardsOnPad() {
 			
@@ -19,6 +22,24 @@ public class CardsOnPad {
 		
 		public ArrayList<Card> getCards(){ //Returnera arrayen 
 			return onHand;
+		}
+		
+		public ArrayList<Card> getPressedCards(){ //Returnera arrayen 
+			
+			pressedCards = new ArrayList<Card>();
+			
+			for(int i = 0; i < onHand.size(); i++){
+				
+				if(onHand.get(i).isPressed() == true){
+					
+					pressedCards.add(onHand.get(i));
+					
+				}
+				
+			}
+			
+			return pressedCards;
+			
 		}
 		
 		public Card getCard(int i){ //Returnera ett visst objekt (kort alltså)

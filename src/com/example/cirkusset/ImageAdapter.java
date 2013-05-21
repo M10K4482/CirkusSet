@@ -73,10 +73,10 @@ public class ImageAdapter extends BaseAdapter {
          if (ca != null){ //Om card objektet inte �r tomt s� k�r f�ljande:
         	 Log.i("Cirkus","ImageNbr: "+ca.getCardImage()); //Lite info om bildens namn
         	 imageView.setImageResource(ca.getCardImage()); //H�R l�gger vi in v�ra kort i imageviewen
-         }/*else{ //Om card objektet �r tomt
-        	 Log.i("Cirkus","DummyImage: "+ R.drawable.empty); //Info om bilden som anv�nds f�r en tom ruta
-        	 imageView.setImageResource(R.drawable.empty); //OM platsen �r tom s� l�gg bilden "empty", som �r utan n�got djur
-         } */
+         }else{ //Om card objektet �r tomt
+        	 Log.i("Cirkus","DummyImage: "+ R.drawable.tomtkort); //Info om bilden som anv�nds f�r en tom ruta
+        	 imageView.setImageResource(R.drawable.tomtkort); //OM platsen �r tom s� l�gg bilden "empty", som �r utan n�got djur
+         }
          
          return imageView;
 

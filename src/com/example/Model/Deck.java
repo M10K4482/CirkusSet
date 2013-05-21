@@ -20,7 +20,7 @@ public class Deck {
 		
 		myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
 		myDeck.add(new Card(R.drawable.turkossalkort2,R.drawable.blue_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
 		
 		myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
 		myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
@@ -41,10 +41,10 @@ public class Deck {
 		c.add(myDeck.get(2));
 		c.add(myDeck.get(3));
 		c.add(myDeck.get(4));
-	     c.add(myDeck.get(5));
-		 c.add(myDeck.get(6));
-		 c.add(myDeck.get(7));
-		 c.add(myDeck.get(8));
+	    c.add(myDeck.get(5));
+		c.add(myDeck.get(6));
+		c.add(myDeck.get(7));
+		c.add(myDeck.get(8));
 		 
 		//Ta bort dem fr�n ursprungliga
 		myDeck.remove(8);
@@ -53,9 +53,9 @@ public class Deck {
 		myDeck.remove(5);
 		myDeck.remove(4);
 		myDeck.remove(3);
-		  myDeck.remove(2);
-		  myDeck.remove(1);
-		  myDeck.remove(0);
+		myDeck.remove(2);
+		myDeck.remove(1);
+		myDeck.remove(0);
 		 
 		return c;
 	}

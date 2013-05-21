@@ -2,6 +2,7 @@ package com.example.cirkusset;
 
 import com.example.Model.Card;
 import com.example.Model.CardsOnPad;
+import com.example.Model.RuleLogic;
 import com.example.cirkusset.ImageAdapter;
 import com.example.cirkusset.MainActivity;
 import com.example.experiment.R;
@@ -23,6 +24,7 @@ public class MainActivity extends Activity {
 	private GridView gr; //Skapa en referens (gridview)
 	private ImageAdapter im; //Skapa en referens (im) så att man kan komma åt ImageAdapter klassen
 	private CardsOnPad onPad; //Referens till de kort som skall vara på paddan 
+	private RuleLogic logic;
 	private int counter;
 	private static int PRESSED_LIMIT=3;
 	
@@ -34,6 +36,7 @@ public class MainActivity extends Activity {
 		onPad = new CardsOnPad(); //Kör igång CardsOnPad klassen genom att anropa konstruktorn (CardsOnPad()) med referensen onPad
 		gr = (GridView) findViewById(R.id.gridviewTest); //Koppla gridview till layouten 
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
+		logic = new RuleLogic();
 		gr.setAdapter(im); //Skapa adapter skicka in våra kort 
 		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
 			
@@ -46,16 +49,21 @@ public class MainActivity extends Activity {
 			
 			for(int i = 0; i < onPad.getCards().size(); i++){
 				
-				Log.i("Limit","Inne i första loopen");
+				Log.i("ANTAL","Antal är: "+onPad.getPressedCards());
 				
 				if(onPad.getCard(i).isPressed()==true){
 					
 					counter = counter + 1;
-					Log.i("Limit","Inne i andra loopen"+counter);
 					
-					if(counter > PRESSED_LIMIT){
+					if(counter == PRESSED_LIMIT){
 						
-						Log.i("Limit","Inne i tredje loopen"); 
+						try {
+							wait(1000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						logic.getRules(onPad.getPressedCards());
 						
 						for(int a = 0; a < onPad.getCards().size(); a++){
 							if(onPad.getCard(a).isPressed()==true){

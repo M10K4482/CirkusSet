@@ -39,22 +39,22 @@ public class Deck {
 		c.add(myDeck.get(2));
 		c.add(myDeck.get(3));
 		c.add(myDeck.get(4));
-	     /*c.add(myDeck.get(5));
+	     c.add(myDeck.get(5));
 		 c.add(myDeck.get(6));
 		 c.add(myDeck.get(7));
 		 c.add(myDeck.get(8));
-		 */
+		 
 		//Ta bort dem från ursprungliga
-		myDeck.remove(0);
-		myDeck.remove(1);
-		myDeck.remove(2);
-		myDeck.remove(3);
+		myDeck.remove(8);
+		myDeck.remove(7);
+		myDeck.remove(6);
+		myDeck.remove(5);
 		myDeck.remove(4);
-		/*myDeck.remove(5);
-		  myDeck.remove(6);
-		  myDeck.remove(7);
-		  myDeck.remove(8);
-		 */
+		myDeck.remove(3);
+		  myDeck.remove(2);
+		  myDeck.remove(1);
+		  myDeck.remove(0);
+		 
 		return c;
 	}
 	

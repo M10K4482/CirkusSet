@@ -34,8 +34,32 @@ public class RuleLogic {
 		
 		mySets = new ArrayList<SetRules>();
 		SetRules l = new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
-				ONE, TWO, THREE, BLUE, BLUE, BLUE); //Ett kort (alltså ett objekt av typen Card) skapas
+				ONE, TWO, THREE, BLUE, BLUE, BLUE); //RÄTT SET,    Ett kort (alltså ett objekt av typen Card) skapas
 		mySets.add(l);
+		
+			
+		
+		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
+				ONE, TWO, THREE, GREEN, GREEN, GREEN));
+		
+				
+		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
+				ONE, TWO, THREE, RED, RED, RED));
+		
+		
+		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
+				ONE, TWO, THREE, BLUE, BLUE, BLUE));
+		
+		
+		
+		mySets.add(new SetRules(APE, LION, SEAL, STRIPES, DOTS, CLEAN,   //RÄTT SET
+				ONE, ONE, ONE, RED, GREEN, BLUE));
+		
+		
+
+		
+		
+		
 		
 	}
 	

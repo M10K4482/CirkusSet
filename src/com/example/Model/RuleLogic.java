@@ -4,7 +4,14 @@ import java.util.ArrayList;
 
 import android.util.Log;
 
-import com.example.experiment.R;
+import com.example.experiment.R; //För att slippa skriva 
+
+import static com.example.Model.Card.CardAnimal.*; //Hänvisningar för Enums CardAnimal, CardFill, CardAmount, CardColor
+import static com.example.Model.Card.CardFill.*;
+import static com.example.Model.Card.CardAmount.*;
+import static com.example.Model.Card.CardColor.*;
+
+
 
 public class RuleLogic {
 	
@@ -26,8 +33,8 @@ public class RuleLogic {
 	public RuleLogic() {
 		
 		mySets = new ArrayList<SetRules>();
-		SetRules l = new SetRules(Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardFill.CLEAN, Card.CardFill.CLEAN, Card.CardFill.CLEAN, 
-				Card.CardAmount.ONE, Card.CardAmount.TWO, Card.CardAmount.THREE, Card.CardColor.BLUE, Card.CardColor.BLUE, Card.CardColor.BLUE); //Ett kort (alltså ett objekt av typen Card) skapas
+		SetRules l = new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
+				ONE, TWO, THREE, BLUE, BLUE, BLUE); //Ett kort (alltså ett objekt av typen Card) skapas
 		mySets.add(l);
 		
 	}

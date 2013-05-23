@@ -49,8 +49,6 @@ public class MainActivity extends Activity {
 			
 			for(int i = 0; i < onPad.getCards().size(); i++){
 				
-				Log.i("ANTAL","Antal är: "+onPad.getPressedCards());
-				
 				if(onPad.getCard(i).isPressed()==true){
 					
 					counter = counter + 1;

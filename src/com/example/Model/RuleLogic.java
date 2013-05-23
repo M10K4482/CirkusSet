@@ -34,23 +34,20 @@ public class RuleLogic {
 		
 		mySets = new ArrayList<SetRules>();
 		SetRules l = new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
-				ONE, TWO, THREE, BLUE, BLUE, BLUE); //RÄTT SET,    Ett kort (alltså ett objekt av typen Card) skapas
-		mySets.add(l);
-		
-			
+				ONE, TWO, THREE, BLUE, BLUE, BLUE); //RÄTT SET
+		mySets.add(l);		
 		
 		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
 				ONE, TWO, THREE, GREEN, GREEN, GREEN));
-		
 				
 		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
 				ONE, TWO, THREE, RED, RED, RED));
 		
-		
 		mySets.add(new SetRules(SEAL, SEAL, SEAL, CLEAN, CLEAN, CLEAN, 
 				ONE, TWO, THREE, BLUE, BLUE, BLUE));
 		
-		
+		mySets.add(new SetRules(LION, LION, LION, DOTS, DOTS, DOTS, 
+				ONE, TWO, THREE, RED, RED, RED));
 		
 		mySets.add(new SetRules(APE, LION, SEAL, STRIPES, DOTS, CLEAN,   //RÄTT SET
 				ONE, ONE, ONE, RED, GREEN, BLUE));
@@ -125,6 +122,9 @@ public class RuleLogic {
 					&& fillOne && fillTwo && fillThree){
 				
 				Log.i("BOOLEAN", "GRATTIS!");
+				for(int r = 0; r < pressedCards.size(); r++){
+					pressedCards.get(r).setTaken(true);
+				}
 				break;
 				
 			}

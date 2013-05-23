@@ -23,11 +23,12 @@ public class RuleLogic {
 	boolean amountTwo;
 	boolean amountThree;
 	
+	
 	public RuleLogic() {
 		
 		mySets = new ArrayList<SetRules>();
 		SetRules l = new SetRules(Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardFill.CLEAN, Card.CardFill.CLEAN, Card.CardFill.CLEAN, 
-				Card.CardAmount.ONE, Card.CardAmount.TWO, Card.CardAmount.THREE, Card.CardColor.BLUE, Card.CardColor.BLUE, Card.CardColor.BLUE); //Ett kort (alltså ett objekt av typen Card) skapas
+				Card.CardAmount.ONE, Card.CardAmount.TWO, Card.CardAmount.THREE, Card.CardColor.BLUE, Card.CardColor.BLUE, Card.CardColor.BLUE); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
 		mySets.add(l);
 		
 	}

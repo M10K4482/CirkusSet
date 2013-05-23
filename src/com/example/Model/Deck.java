@@ -69,9 +69,9 @@ public class Deck {
 		/*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
 		
 		//SÄL RÖD:
-		/*36*/myDeck.add(new Card(R.drawable.pinkfill_oneseal,R.drawable.pink_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*37*/myDeck.add(new Card(R.drawable.pinkfill_oneseal,R.drawable.pink_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*38*/myDeck.add(new Card(R.drawable.pinkfill_oneseal,R.drawable.pink_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*36*/myDeck.add(new Card(R.drawable.rosasalkort1,R.drawable.pink_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
+		/*37*/myDeck.add(new Card(R.drawable.rosasalkort2,R.drawable.pink_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
+		/*38*/myDeck.add(new Card(R.drawable.rosasalkort3,R.drawable.pink_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*39*/myDeck.add(new Card(R.drawable.pinktstripe_oneseal,R.drawable.pink_stripes_seal1,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*40*/myDeck.add(new Card(R.drawable.pinkstripe_twoseal,R.drawable.pink_stripes_seal2,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
@@ -99,9 +99,9 @@ public class Deck {
 		/*55*/myDeck.add(new Card(R.drawable.rosaapaprickar2,R.drawable.pink_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
 		/*56*/myDeck.add(new Card(R.drawable.rosaapaprickar3,R.drawable.pink_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
 		
-		/*57*/myDeck.add(new Card(R.drawable.rosaapakort1,R.drawable.pink_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*58*/myDeck.add(new Card(R.drawable.rosaapakort2,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*59*/myDeck.add(new Card(R.drawable.rosaapakort3,R.drawable.pink_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*57*/myDeck.add(new Card(R.drawable.pinkfill_onemonkey,R.drawable.pink_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
+		/*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
+		/*59*/myDeck.add(new Card(R.drawable.pinkfill_threemonkey,R.drawable.pink_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*61*/myDeck.add(new Card(R.drawable.rosaapastreck2,R.drawable.pink_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
@@ -132,6 +132,7 @@ public class Deck {
 		/*78*/myDeck.add(new Card(R.drawable.greenapastreck1,R.drawable.green_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
 		/*79*/myDeck.add(new Card(R.drawable.greenapastreck2,R.drawable.green_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*80*/myDeck.add(new Card(R.drawable.greenapastreck3,R.drawable.green_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));	
+		
 		//OSV f�r alla kort
 	}
 	

@@ -46,7 +46,7 @@ public class Deck {
 		myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
 		myDeck.add(new Card(R.drawable.rosalejonkort3,R.drawable.pink_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.THREE));
 		
-		myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
+		myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
 		myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
 		myDeck.add(new Card(R.drawable.rosalejonprickar1,R.drawable.pink_dots_lion1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
 		

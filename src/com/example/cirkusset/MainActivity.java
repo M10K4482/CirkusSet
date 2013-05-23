@@ -49,20 +49,12 @@ public class MainActivity extends Activity {
 			
 			for(int i = 0; i < onPad.getCards().size(); i++){
 				
-				Log.i("ANTAL","Antal är: "+onPad.getPressedCards());
-				
 				if(onPad.getCard(i).isPressed()==true){
 					
 					counter = counter + 1;
 					
 					if(counter == PRESSED_LIMIT){
 						
-						try {
-							wait(1000);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
 						logic.getRules(onPad.getPressedCards());
 						
 						for(int a = 0; a < onPad.getCards().size(); a++){

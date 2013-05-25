@@ -26,7 +26,8 @@ public class MainActivity extends Activity {
 	private CardsOnPad onPad; //Referens till de kort som skall vara på paddan 
 	private RuleLogic logic;
 	private int counter;
-	private static int PRESSED_LIMIT=3;
+	private static int PRESSED_LIMIT = 3;
+	private boolean setCards;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,6 @@ public class MainActivity extends Activity {
 			Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show(); //En toast med info om position
 			Card ca = onPad.getCard(position); //Hämta kortet som klickats via dess position på brädet
 			ca.pressCard(); //Tryck in kortet och byt dess bild
-			Log.i("Cirkus","Image: "+ ca.getCardImage());
 			
 			for(int i = 0; i < onPad.getCards().size(); i++){
 				
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 					
 					if(counter == PRESSED_LIMIT){
 						
-						logic.getRules(onPad.getPressedCards());
+						setCards = logic.getRules(onPad.getPressedCards());
 						
 						for(int a = 0; a < onPad.getCards().size(); a++){
 							if(onPad.getCard(a).isPressed()==true){

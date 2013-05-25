@@ -70,11 +70,9 @@ public class ImageAdapter extends BaseAdapter {
         }
         
          Card ca = onPad.getCard(position); //Skapa en Card-klass referens (c) och ge den v�ra kort fr�n CardsOnPad klassen
-         if (ca != null && ca.getTaken() != true){ //Om card objektet inte �r tomt s� k�r f�ljande:
-        	 Log.i("Cirkus","ImageNbr: "+ca.getCardImage()); //Lite info om bildens namn
+         if (ca != null){ //Om card objektet inte �r tomt s� k�r f�ljande:
         	 imageView.setImageResource(ca.getCardImage()); //H�R l�gger vi in v�ra kort i imageviewen
-         }else if(ca.getTaken() == true){ //Om card objektet �r tomt
-        	 Log.i("Cirkus","DummyImage: "+ R.drawable.tomtkort); //Info om bilden som anv�nds f�r en tom ruta
+         }else{ //Om card objektet �r tomt
         	 imageView.setImageResource(R.drawable.tomtkort); //OM platsen �r tom s� l�gg bilden "empty", som �r utan n�got djur
          }
          

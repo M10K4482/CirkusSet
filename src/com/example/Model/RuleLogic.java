@@ -8,105 +8,54 @@ import com.example.experiment.R;
 
 public class RuleLogic {
 	
-	private ArrayList<SetRules> mySets;
-	private CardsOnPad onPad;
-	boolean colorOne;
-	boolean colorTwo;
-	boolean colorThree;
-	boolean animalOne;
-	boolean animalTwo;
-	boolean animalThree;
-	boolean fillOne;
-	boolean fillTwo;
-	boolean fillThree;
-	boolean amountOne;
-	boolean amountTwo;
-	boolean amountThree;
-	
-	
 	public RuleLogic() {
 		
-		mySets = new ArrayList<SetRules>();
-		SetRules l = new SetRules(Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardAnimal.SEAL, Card.CardFill.CLEAN, Card.CardFill.CLEAN, Card.CardFill.CLEAN, 
-				Card.CardAmount.ONE, Card.CardAmount.TWO, Card.CardAmount.THREE, Card.CardColor.BLUE, Card.CardColor.BLUE, Card.CardColor.BLUE); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
-		mySets.add(l);
-		
 	}
 	
-	public void getRules(ArrayList<Card> pressedCards){
+	public boolean getRules(ArrayList<Card> pressedCards){
 		
-		colorOne = false;
-		colorTwo = false;
-		colorThree = false;
-		animalOne = false;
-		animalTwo = false;
-		animalThree = false;
-		fillOne = false;
-		fillTwo = false;
-		fillThree = false;
-		amountOne = false;
-		amountTwo = false;
-		amountThree = false;
-		
-		for(int a = 0; a < mySets.size(); a++){
-			
-			for(int i = 0; i < pressedCards.size(); i++){
-				
-				if(pressedCards.get(i).getCardColor() == mySets.get(a).getRuleColorOne()){
-					colorOne = true;
-				}
-				if(pressedCards.get(i).getCardColor() == mySets.get(a).getRuleColorTwo()){
-					colorTwo = true;
-				}
-				if(pressedCards.get(i).getCardColor() == mySets.get(a).getRuleColorThree()){
-					colorThree = true;
-				}
-				if(pressedCards.get(i).getCardAnimal() == mySets.get(a).getRuleAnimalOne()){
-					animalOne = true;
-				}
-				if(pressedCards.get(i).getCardAnimal() == mySets.get(a).getRuleAnimalTwo()){
-					animalTwo = true;
-				}
-				if(pressedCards.get(i).getCardAnimal() == mySets.get(a).getRuleAnimalThree()){
-					animalThree = true;
-				}
-				if(pressedCards.get(i).getCardFill() == mySets.get(a).getRuleFillOne()){
-					fillOne = true;
-				}
-				if(pressedCards.get(i).getCardFill() == mySets.get(a).getRuleFillTwo()){
-					fillTwo = true;
-				}
-				if(pressedCards.get(i).getCardFill() == mySets.get(a).getRuleFillThree()){
-					fillThree = true;
-				}
-				if(pressedCards.get(i).getCardAmount() == mySets.get(a).getRuleAmountOne()){
-					amountOne = true;
-				}
-				if(pressedCards.get(i).getCardAmount() == mySets.get(a).getRuleAmountTwo()){
-					amountTwo = true;
-				}
-				if(pressedCards.get(i).getCardAmount() == mySets.get(a).getRuleAmountThree()){
-					amountThree = true;
-				}
-				
-			}
-			
-			if(colorOne && colorTwo && colorThree && animalOne && animalTwo && animalThree && amountOne && amountTwo && amountThree
-					&& fillOne && fillTwo && fillThree){
-				
-				Log.i("BOOLEAN", "GRATTIS!");
-				break;
-				
-			}
-			
+		/*Här jämförs de tre markerade korten (0,1,2) med varandra. 
+		För varje if-sats jämförs en specefik grejj såsom färg, fyllnad, djur etc. */
+		if(!((pressedCards.get(0).getCardColor() == pressedCards.get(1).getCardColor()) && 
+			(pressedCards.get(1).getCardColor() == pressedCards.get(2).getCardColor()) || 
+			(pressedCards.get(0).getCardColor() != pressedCards.get(1).getCardColor()) && 
+			(pressedCards.get(1).getCardColor() != pressedCards.get(2).getCardColor()) && 
+			(pressedCards.get(0).getCardColor() != pressedCards.get(2).getCardColor()))){
+			Log.i("Rättar set", "Fel färg!");
+			return false;
 		}
-		
-	}
-	
-	public ArrayList<SetRules> getArray(){
-		
-		return mySets;
+
+		if(!((pressedCards.get(0).getCardAnimal() == pressedCards.get(1).getCardAnimal()) && 
+			(pressedCards.get(1).getCardAnimal() == pressedCards.get(2).getCardAnimal()) || 
+			(pressedCards.get(0).getCardAnimal() != pressedCards.get(1).getCardAnimal()) && 
+			(pressedCards.get(1).getCardAnimal() != pressedCards.get(2).getCardAnimal()) && 
+			(pressedCards.get(0).getCardAnimal() != pressedCards.get(2).getCardAnimal()))){
+			Log.i("Rättar set", "Fel djur!");
+			return false;
+		}
+			
+		if(!((pressedCards.get(0).getCardFill() == pressedCards.get(1).getCardFill()) && 
+			(pressedCards.get(1).getCardFill() == pressedCards.get(2).getCardFill()) || 
+			(pressedCards.get(0).getCardFill() != pressedCards.get(1).getCardFill()) && 
+			(pressedCards.get(1).getCardFill() != pressedCards.get(2).getCardFill()) && 
+			(pressedCards.get(0).getCardFill() != pressedCards.get(2).getCardFill()))){
+			Log.i("Rättar set", "Fel fyllnad!");
+			return false;
+		}
+			
+		if(!((pressedCards.get(0).getCardAmount() == pressedCards.get(1).getCardAmount()) && 
+			(pressedCards.get(1).getCardAmount() == pressedCards.get(2).getCardAmount()) || 
+			(pressedCards.get(0).getCardAmount() != pressedCards.get(1).getCardAmount()) && 
+			(pressedCards.get(1).getCardAmount() != pressedCards.get(2).getCardAmount()) && 
+			(pressedCards.get(0).getCardAmount() != pressedCards.get(2).getCardAmount()))){
+			Log.i("Rättar set", "Fel antal!");
+			return false;
+		}
+			
+		Log.i("Rättar set", "Setet är rätt!");
+		return true;
 		
 	}
 
 }
+

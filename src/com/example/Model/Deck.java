@@ -9,11 +9,9 @@ import android.util.Log;
 public class Deck {
 	private ArrayList<Card> myDeck;
 	public Deck() {
-		//Skapa alla korten
-		myDeck = new ArrayList<Card>();
-		//Detta kommer bli en lite l�ng lista men s� l�nge funkar det.
-		//myDeck = new ArrayList<Card>();
 		
+		myDeck = new ArrayList<Card>();	
+		//Skapa alla korten
 		//LEJON GRÖN:
 		Card c = new Card
 		/*0*/(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE); //Ett kort (allts� ett objekt av typen Card) skapas
@@ -168,21 +166,8 @@ public class Deck {
 		return c;
 	}
 	
-	public ArrayList<Card> getArray(){
-		
-		return myDeck;
-		
-	}
-
-	public void printInfo() {
-		// TODO Auto-generated method stub
-		Log.i("Mark","Info om deck");
-		//osv
-	}
-	
-	public String getInfo() {
-		// TODO Auto-generated method stub
-		return "A lot of info om leken alla kort etc etc";
+	public ArrayList<Card> getArray(){		
+		return myDeck;		
 	}
 	
 }

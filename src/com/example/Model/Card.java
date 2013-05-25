@@ -6,6 +6,7 @@ import com.example.Model.Card.CardColor;
 import com.example.Model.Card.CardFill;
 
 public class Card {
+	
 	//F�rdelen med detta �r att man bara kan av�nda dessa orden s� att det inte kan bli missf�rst�nd. L�s om enum
 	public static enum CardAnimal{LION,APE,SEAL}; //Anv�nds f�r att beskriva varje korts typ av djur
 	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Anv�nds f�r att beskriva varje korts bakgrund
@@ -34,14 +35,12 @@ public class Card {
 		taken = false;
 	}
 
-	public int getCardImage() { //H�r s�tts bilden (tryckt eller normal) som ska ritas ut f�r ett visst kort
-		
+	public int getCardImage() { //H�r s�tts bilden (tryckt eller normal) som ska ritas ut f�r ett visst kort	
 		int cardImage = cardNormal;
 		if (isPressed){
 			cardImage = cardPressed;
 		}
-		return cardImage;
-		
+		return cardImage;	
 	}
 	
 	//Dessa "get..." metoder anv�nds f�r att returnera typerna f�r varje objekt (kort allts�)
@@ -64,26 +63,9 @@ public class Card {
 	public void pressCard(){ //N�r ett kort trycks anropas denna metod f�r det tryckta objektet (kortet)	
 		isPressed =! isPressed; //Byter true och false beroende p� vad det f�r tillf�llet �r 
 	}
-	
-	public boolean getTaken(){
-		
-		return taken;
-		
-	}
-	
-	public void setTaken(boolean isTaken){
-		
-		taken = isTaken;
-		
-	}
 
 	public boolean isPressed(){ //Returnera true/false 
 		return isPressed;
 	}
-
-	//Plus fler metoder
-	@Override
-	public String toString() {
-		return "Skriv info om korten";
-	}
+	
 }

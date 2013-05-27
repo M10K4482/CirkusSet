@@ -20,7 +20,6 @@ public class Card {
 	private CardAmount amount;
 	private CardColor color;
     private boolean isPressed; //En true/false f�r att senare kunna avg�ra om ett kort tryckts eller ej
-    private boolean taken;
     
 	/**En konstruktor d�r man skapar ett kort och sparar bilder (eller r.id.xx f�r bilderna) samt typen av bild*/
 	public Card(int cardNormal, int cardPressed, CardFill fill, CardAnimal animal, CardColor color, CardAmount amount) {
@@ -32,7 +31,6 @@ public class Card {
 		this.fill = fill;
 		this.amount = amount;
 		this.color = color;
-		taken = false;
 	}
 
 	public int getCardImage() { //H�r s�tts bilden (tryckt eller normal) som ska ritas ut f�r ett visst kort	
@@ -67,5 +65,6 @@ public class Card {
 	public boolean isPressed(){ //Returnera true/false 
 		return isPressed;
 	}
+	
 	
 }

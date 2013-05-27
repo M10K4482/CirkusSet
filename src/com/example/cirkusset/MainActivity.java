@@ -2,6 +2,7 @@ package com.example.cirkusset;
 
 import com.example.Model.Card;
 import com.example.Model.CardsOnPad;
+import com.example.Model.Deck;
 import com.example.Model.RuleLogic;
 import com.example.cirkusset.ImageAdapter;
 import com.example.cirkusset.MainActivity;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -28,12 +30,15 @@ public class MainActivity extends Activity {
 	private int counter;
 	private static int PRESSED_LIMIT = 3;
 	private boolean setCards;
+	private Deck aDeck;
+	private Button shuffleButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
+		
 		onPad = new CardsOnPad(); //Kör igång CardsOnPad klassen genom att anropa konstruktorn (CardsOnPad()) med referensen onPad
 		gr = (GridView) findViewById(R.id.gridviewTest); //Koppla gridview till layouten 
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
@@ -56,6 +61,12 @@ public class MainActivity extends Activity {
 					if(counter == PRESSED_LIMIT){
 						
 						setCards = logic.getRules(onPad.getPressedCards());
+						
+						if(setCards == true){
+
+							onPad.getNewHand();
+							
+						}
 						
 						for(int a = 0; a < onPad.getCards().size(); a++){
 							if(onPad.getCard(a).isPressed()==true){

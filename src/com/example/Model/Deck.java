@@ -2,6 +2,7 @@ package com.example.Model;
 
 import com.example.experiment.R;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import android.util.Log;
 
@@ -134,15 +135,17 @@ public class Deck {
 		//OSV fï¿½r alla kort
 	}
 	
-	public void shuffle(){ //Hï¿½r kommer korten blandas sï¿½ smï¿½ningom
-		//Shuffle the cards
+	public void shuffle(){ //Här blandas kortleken
+		
+		Collections.shuffle(myDeck);
+		
 	}
 	
 	public ArrayList<Card> getNbrOfCards(int nbr){
 		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
 		//Lï¿½gger fï¿½rst till kort
 		ArrayList<Card> c = new ArrayList<Card>();
-		c.add(myDeck.get(4));
+		/*c.add(myDeck.get(4));
 		c.add(myDeck.get(19));
 		c.add(myDeck.get(31));
 		c.add(myDeck.get(58));
@@ -162,8 +165,57 @@ public class Deck {
 		myDeck.remove(31);
 		myDeck.remove(19);
 		myDeck.remove(4);
+	*/	
+		c.add(myDeck.get(0));
+		c.add(myDeck.get(1));
+		c.add(myDeck.get(2));
+		c.add(myDeck.get(3));
+		c.add(myDeck.get(4));
+	    c.add(myDeck.get(5));
+		c.add(myDeck.get(6));
+		c.add(myDeck.get(7));
+		c.add(myDeck.get(8));
 		 
+		//Ta bort dem frï¿½n ursprungliga
+		myDeck.remove(8);
+		myDeck.remove(7);
+		myDeck.remove(6);
+		myDeck.remove(5);
+		myDeck.remove(4);
+		myDeck.remove(3);
+		myDeck.remove(2);
+		myDeck.remove(1);
+		myDeck.remove(0);
+		
 		return c;
+	}
+	
+	public ArrayList<Card> getThreeCards(int nbr){
+		
+		ArrayList<Card> c2 = new ArrayList<Card>();
+		c2.add(myDeck.get(0));
+		c2.add(myDeck.get(1));
+		c2.add(myDeck.get(2));
+		c2.add(myDeck.get(3));
+		c2.add(myDeck.get(4));
+		c2.add(myDeck.get(5));
+		c2.add(myDeck.get(6));
+		c2.add(myDeck.get(7));
+		c2.add(myDeck.get(8));
+
+		 
+		//Ta bort dem frï¿½n ursprungliga
+		myDeck.remove(8);
+		myDeck.remove(7);
+		myDeck.remove(6);
+		myDeck.remove(5);
+		myDeck.remove(4);
+		myDeck.remove(3);
+		myDeck.remove(2);
+		myDeck.remove(1);
+		myDeck.remove(0);
+		 
+		return c2;
 	}
 	
 	public ArrayList<Card> getArray(){		

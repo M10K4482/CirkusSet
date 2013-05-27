@@ -13,23 +13,35 @@ public class Deck {
 		
 		myDeck = new ArrayList<Card>();	
 		//Skapa alla korten
-		//LEJON GRÃ–N:
-		Card c = new Card
-		/*0*/(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
+		
+		//Här läggs alla de kort som skrivs ut första gången, la dem här så att man kunde kalla på dem via 0-8 i getNbrOfCards metoden!
+		/*4*/Card c = new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
 		myDeck.add(c);
+		/*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
+		/*31*/myDeck.add(new Card(R.drawable.turkossalprickar2,R.drawable.blue_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
+		/*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
+		/*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
+		/*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
+		/*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
+		//Här ovanför läggs alla de kort som skrivs ut första gången, la dem här så att man kunde kalla på dem via 0-8 i getNbrOfCards metoden!
+		
+		//LEJON GRÖN:
+		/*0*/myDeck.add(new Card(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
 		/*1*/myDeck.add(new Card(R.drawable.greenlejonstreck2,R.drawable.green_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*2*/myDeck.add(new Card(R.drawable.greenlejonstreck3,R.drawable.green_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
 		/*3*/myDeck.add(new Card(R.drawable.greenlejonkort1,R.drawable.green_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*4*/myDeck.add(new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		///*4*/myDeck.add(new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*5*/myDeck.add(new Card(R.drawable.greenlejonkort3,R.drawable.green_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		///*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
 		/*7*/myDeck.add(new Card(R.drawable.greenlejonprickar2,R.drawable.green_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*8*/myDeck.add(new Card(R.drawable.greenlejonprickar3,R.drawable.green_dots_lion3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
 		//LEJON BLÃ…:
-		/*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
+		///*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
 		/*10*/myDeck.add(new Card(R.drawable.turkoslejonkort2,R.drawable.blue_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
 		/*11*/myDeck.add(new Card(R.drawable.turkoslejonkort3,R.drawable.blue_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
 		
@@ -43,7 +55,7 @@ public class Deck {
 		
 		//LEJON RÃ–D:
 		/*18*/myDeck.add(new Card(R.drawable.rosalejonkort1,R.drawable.pink_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
+		///*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
 		/*20*/myDeck.add(new Card(R.drawable.rosalejonkort3,R.drawable.pink_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*21*/myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
@@ -55,7 +67,7 @@ public class Deck {
 		/*26*/myDeck.add(new Card(R.drawable.rosalejonstreck1,R.drawable.pink_stripes_lion1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
 		
 		//SÃ„L BLÃ…
-		/*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
+		///*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
 		/*28*/myDeck.add(new Card(R.drawable.turkossalkort2,R.drawable.blue_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
 		/*29*/myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
 		
@@ -65,7 +77,7 @@ public class Deck {
 		
 		/*33*/myDeck.add(new Card(R.drawable.turkossalstreck1,R.drawable.blue_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
 		/*34*/myDeck.add(new Card(R.drawable.turkossalstreck2,R.drawable.blue_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		///*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
 		
 		//SÃ„L RÃ–D:
 		/*36*/myDeck.add(new Card(R.drawable.rosasalkort1,R.drawable.pink_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
@@ -99,10 +111,10 @@ public class Deck {
 		/*56*/myDeck.add(new Card(R.drawable.rosaapaprickar3,R.drawable.pink_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*57*/myDeck.add(new Card(R.drawable.pinkfill_onemonkey,R.drawable.pink_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
+		///*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
 		/*59*/myDeck.add(new Card(R.drawable.pinkfill_threemonkey,R.drawable.pink_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
 		
-		/*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
+		///*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*61*/myDeck.add(new Card(R.drawable.rosaapastreck2,R.drawable.pink_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
 		/*62*/myDeck.add(new Card(R.drawable.rosaapastreck3,R.drawable.pink_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
 		
@@ -145,48 +157,27 @@ public class Deck {
 		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
 		//Lï¿½gger fï¿½rst till kort
 		ArrayList<Card> c = new ArrayList<Card>();
-		/*c.add(myDeck.get(4));
-		c.add(myDeck.get(19));
-		c.add(myDeck.get(31));
-		c.add(myDeck.get(58));
-		c.add(myDeck.get(35));
-	    c.add(myDeck.get(6));
-		c.add(myDeck.get(9));
-		c.add(myDeck.get(60));
-		c.add(myDeck.get(27));
-		 
-		//Ta bort dem frï¿½n ursprungliga
-		myDeck.remove(27);
-		myDeck.remove(60);
-		myDeck.remove(9);
-		myDeck.remove(6);
-		myDeck.remove(35);
-		myDeck.remove(58);
-		myDeck.remove(31);
-		myDeck.remove(19);
-		myDeck.remove(4);
-	*/	
 		c.add(myDeck.get(0));
 		c.add(myDeck.get(1));
 		c.add(myDeck.get(2));
 		c.add(myDeck.get(3));
 		c.add(myDeck.get(4));
-	    c.add(myDeck.get(5));
-		c.add(myDeck.get(6));
+		c.add(myDeck.get(5));
+	    c.add(myDeck.get(6));
 		c.add(myDeck.get(7));
 		c.add(myDeck.get(8));
 		 
 		//Ta bort dem frï¿½n ursprungliga
-		myDeck.remove(8);
-		myDeck.remove(7);
-		myDeck.remove(6);
-		myDeck.remove(5);
-		myDeck.remove(4);
-		myDeck.remove(3);
-		myDeck.remove(2);
-		myDeck.remove(1);
 		myDeck.remove(0);
-		
+		myDeck.remove(1);
+		myDeck.remove(2);
+		myDeck.remove(3);
+		myDeck.remove(4);
+		myDeck.remove(5);
+		myDeck.remove(6);
+		myDeck.remove(7);
+		myDeck.remove(8);
+	
 		return c;
 	}
 	

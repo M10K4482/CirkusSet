@@ -15,10 +15,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -31,13 +33,22 @@ public class MainActivity extends Activity {
 	private static int PRESSED_LIMIT = 3;
 	private boolean setCards;
 	private Deck aDeck;
-	private Button shuffleButton;
+	private ImageButton shuffleButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
+		
+		this.shuffleButton = (ImageButton)this.findViewById(R.id.imageButton1);
+		  this.shuffleButton.setOnClickListener(new OnClickListener() {
+		    @Override
+		  public void onClick(View v) {
+		      onPad.getNewHand();
+		      im.notifyDataSetChanged();
+		    }
+		  });
 		
 		onPad = new CardsOnPad(); //Kör igång CardsOnPad klassen genom att anropa konstruktorn (CardsOnPad()) med referensen onPad
 		gr = (GridView) findViewById(R.id.gridviewTest); //Koppla gridview till layouten 

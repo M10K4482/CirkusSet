@@ -50,7 +50,7 @@ public class Deck {
 		/*22*/myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
 		/*23*/myDeck.add(new Card(R.drawable.rosalejonprickar1,R.drawable.pink_dots_lion1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
 		
-		/*24*/myDeck.add(new Card(R.drawable.rosalejonstreck2,R.drawable.pink_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
+		/*24*/myDeck.add(new Card(R.drawable.rosalejonstreck2,R.drawable.pink_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
 		/*25*/myDeck.add(new Card(R.drawable.rosalejonstreck3,R.drawable.pink_stripes_lion3_click,Card. CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
 		/*26*/myDeck.add(new Card(R.drawable.rosalejonstreck1,R.drawable.pink_stripes_lion1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
 		
@@ -85,9 +85,9 @@ public class Deck {
 		/*46*/myDeck.add(new Card(R.drawable.greenfill_twoseal,R.drawable.green_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*47*/myDeck.add(new Card(R.drawable.greenfill_threeseal,R.drawable.green_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
 		/*51*/myDeck.add(new Card(R.drawable.greendot_oneseal,R.drawable.green_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
 		/*52*/myDeck.add(new Card(R.drawable.greendot_twoseal,R.drawable.green_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
@@ -135,7 +135,7 @@ public class Deck {
 		//OSV fï¿½r alla kort
 	}
 	
-	public void shuffle(){ //Här blandas kortleken
+	public void shuffle(){ //Hï¿½r blandas kortleken
 		
 		Collections.shuffle(myDeck);
 		
@@ -145,7 +145,7 @@ public class Deck {
 		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
 		//Lï¿½gger fï¿½rst till kort
 		ArrayList<Card> c = new ArrayList<Card>();
-		/*c.add(myDeck.get(4));
+		c.add(myDeck.get(4));
 		c.add(myDeck.get(19));
 		c.add(myDeck.get(31));
 		c.add(myDeck.get(58));
@@ -165,7 +165,7 @@ public class Deck {
 		myDeck.remove(31);
 		myDeck.remove(19);
 		myDeck.remove(4);
-	*/	
+	/*	
 		c.add(myDeck.get(0));
 		c.add(myDeck.get(1));
 		c.add(myDeck.get(2));
@@ -186,7 +186,7 @@ public class Deck {
 		myDeck.remove(2);
 		myDeck.remove(1);
 		myDeck.remove(0);
-		
+		*/
 		return c;
 	}
 	

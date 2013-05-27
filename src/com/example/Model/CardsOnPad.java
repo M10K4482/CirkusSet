@@ -11,7 +11,6 @@ public class CardsOnPad {
 	private static int THREE_CARDS = 3;
 	private Deck deck; //referens till kortleken
 	private ArrayList<Card> onHand; //En array för alla korten som ska finnas på brädet
-	private ArrayList<Card> newHand;
 	private ArrayList<Card> pressedCards;
 	
 	public CardsOnPad() {			
@@ -39,11 +38,12 @@ public class CardsOnPad {
 	
 	public void getNewHand(){ //Returnera ett visst objekt (kort alltså)
 		deck.shuffle();
-		onHand = deck.getNbrOfCards(NBR_OF_CARDS);;
+		onHand = deck.getNbrOfCards(NBR_OF_CARDS);
 	}
 	
-	public Card getNewCard(int i){ //Returnera ett visst objekt (kort alltså)
-		return newHand.get(i);
+	public void getThreeCards(){ //Returnera ett visst objekt (kort alltså)
+		deck.shuffle();
+		onHand = deck.getThreeNewCards(pressedCards);
 	}
 	
 }

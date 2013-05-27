@@ -73,18 +73,18 @@ public class MainActivity extends Activity {
 						
 						setCards = logic.getRules(onPad.getPressedCards());
 						
-						if(setCards == true){
-
-							onPad.getNewHand();
-							
-						}
-						
 						for(int a = 0; a < onPad.getCards().size(); a++){
 							if(onPad.getCard(a).isPressed()==true){
 								
 								onPad.getCard(a).pressCard();
 								
 							}
+						}
+						
+						if(setCards == true){
+
+							onPad.getThreeCards();
+							
 						}
 						
 						im.notifyDataSetChanged();

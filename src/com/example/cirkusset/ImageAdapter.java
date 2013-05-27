@@ -70,10 +70,10 @@ public class ImageAdapter extends BaseAdapter {
         }
         
          Card ca = onPad.getCard(position); //Skapa en Card-klass referens (c) och ge den v�ra kort fr�n CardsOnPad klassen
-         if (ca != null ){ //Om card objektet inte �r tomt s� k�r f�ljande:
+         if (ca != null){ //Om card objektet inte �r tomt s� k�r f�ljande:
         	 imageView.setImageResource(ca.getCardImage()); //H�R l�gger vi in v�ra kort i imageviewen
-         }else{ //Om card objektet �r tomt
-        	 
+         }else{
+        	
          }
          
          return imageView;

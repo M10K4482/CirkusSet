@@ -9,8 +9,10 @@ import android.util.Log;
 //Class that handles a deck of cards
 public class Deck {
 	private ArrayList<Card> myDeck;
+	ArrayList<Card> c;
 	public Deck() {
 		
+		c = new ArrayList<Card>();
 		myDeck = new ArrayList<Card>();	
 		//Skapa alla korten
 		
@@ -156,57 +158,46 @@ public class Deck {
 	public ArrayList<Card> getNbrOfCards(int nbr){
 		//H�r l�gger man till och tar bort kort fr�n br�det
 		//L�gger f�rst till kort
-		ArrayList<Card> c = new ArrayList<Card>();
-		c.add(myDeck.get(0));
-		c.add(myDeck.get(1));
-		c.add(myDeck.get(2));
-		c.add(myDeck.get(3));
-		c.add(myDeck.get(4));
-		c.add(myDeck.get(5));
-	    c.add(myDeck.get(6));
-		c.add(myDeck.get(7));
-		c.add(myDeck.get(8));
-		 
-		//Ta bort dem fr�n ursprungliga
-		myDeck.remove(0);
-		myDeck.remove(1);
-		myDeck.remove(2);
-		myDeck.remove(3);
-		myDeck.remove(4);
-		myDeck.remove(5);
-		myDeck.remove(6);
-		myDeck.remove(7);
-		myDeck.remove(8);
-	
+		
+		for(int firstDelete = 0; firstDelete < c.size(); firstDelete++){
+			
+			c.remove(firstDelete);
+			
+		}
+		
+		for(int insert = 0; insert < nbr; insert++){
+			
+			c.add(myDeck.get(insert));
+			
+		}
+		
+		for(int secondDelete = 0; secondDelete < nbr; secondDelete++){
+			
+			myDeck.remove(secondDelete);
+			
+		}
+
 		return c;
 	}
 	
-	public ArrayList<Card> getThreeCards(int nbr){
+	public ArrayList<Card> getThreeNewCards(ArrayList<Card> pressedCards){
+		//H�r l�gger man till och tar bort kort fr�n br�det
+		//L�gger f�rst till kort
 		
-		ArrayList<Card> c2 = new ArrayList<Card>();
-		c2.add(myDeck.get(0));
-		c2.add(myDeck.get(1));
-		c2.add(myDeck.get(2));
-		c2.add(myDeck.get(3));
-		c2.add(myDeck.get(4));
-		c2.add(myDeck.get(5));
-		c2.add(myDeck.get(6));
-		c2.add(myDeck.get(7));
-		c2.add(myDeck.get(8));
-
-		 
-		//Ta bort dem fr�n ursprungliga
-		myDeck.remove(8);
-		myDeck.remove(7);
-		myDeck.remove(6);
-		myDeck.remove(5);
-		myDeck.remove(4);
-		myDeck.remove(3);
-		myDeck.remove(2);
-		myDeck.remove(1);
-		myDeck.remove(0);
-		 
-		return c2;
+		for(int pressed = 0; pressed < pressedCards.size(); pressed++){
+			for(int exchange = 0; exchange < c.size(); exchange++){
+			
+				if(c.get(exchange).equals(pressedCards.get(pressed))){
+				
+					c.remove(exchange);
+					c.add(exchange, myDeck.get(pressed));
+					
+				}
+			}
+		}
+		
+		return c;
+		
 	}
 	
 	public ArrayList<Card> getArray(){		

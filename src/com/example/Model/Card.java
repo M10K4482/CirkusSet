@@ -31,6 +31,7 @@ public class Card {
 		this.fill = fill;
 		this.amount = amount;
 		this.color = color;
+		
 	}
 
 	public int getCardImage() { //H�r s�tts bilden (tryckt eller normal) som ska ritas ut f�r ett visst kort	
@@ -65,6 +66,5 @@ public class Card {
 	public boolean isPressed(){ //Returnera true/false 
 		return isPressed;
 	}
-	
 	
 }

@@ -4,6 +4,7 @@ import com.example.Model.Card;
 import com.example.Model.CardsOnPad;
 import com.example.Model.Deck;
 import com.example.Model.RuleLogic;
+import com.example.Model.SoundPlayer;
 import com.example.cirkusset.ImageAdapter;
 import com.example.cirkusset.MainActivity;
 import com.example.experiment.R;
@@ -34,6 +35,7 @@ public class MainActivity extends Activity {
 	private boolean setCards;
 	private Deck aDeck;
 	private ImageButton shuffleButton;
+	private SoundPlayer sounds;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,50 +57,40 @@ public class MainActivity extends Activity {
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
 		logic = new RuleLogic();
 		gr.setAdapter(im); //Skapa adapter skicka in våra kort 
-		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
-			
-		public void onItemClick(AdapterView<?> parent, View v, int position, long id) { //Denna kör igång när man klickat något och använder sig av en adaptor
-			counter = 0;
-			Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show(); //En toast med info om position
-			Card ca = onPad.getCard(position); //Hämta kortet som klickats via dess position på brädet
-			ca.pressCard(); //Tryck in kortet och byt dess bild
-			
-			for(int i = 0; i < onPad.getCards().size(); i++){
+		// Ni har helt enkelt missat att initiera "getSounds" objektet - eftersom ni använder mediaplayer i Sounds klassen så måste ni även skicka med en referens till aktiviteten (alltså den kontext där ljuden skall spelas)
+				sounds = new SoundPlayer(this);
 				
-				if(onPad.getCard(i).isPressed()==true){
+				gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
 					
-					counter = counter + 1;
+				public void onItemClick(AdapterView<?> parent, View v, int position, long id) { //Denna kï¿½r igï¿½ng nï¿½r man klickat nï¿½got och anvï¿½nder sig av en adaptor
+					counter = 0;
+					Toast.makeText(MainActivity.this, "" + position, Toast.LENGTH_SHORT).show(); //En toast med info om position
+					Card ca = onPad.getCard(position); //Hï¿½mta kortet som klickats via dess position pï¿½ brï¿½det
+					ca.pressCard(); //Tryck in kortet och byt dess bild
+					sounds.getSound(3);
 					
-					if(counter == PRESSED_LIMIT){
-						
-						setCards = logic.getRules(onPad.getPressedCards());
-						
-						for(int a = 0; a < onPad.getCards().size(); a++){
-							if(onPad.getCard(a).isPressed()==true){
-								
-								onPad.getCard(a).pressCard();
-								
-							}
-						}
-						
-						if(setCards == true){
-
-							onPad.getThreeCards();
-							
-						}
-						
-						im.notifyDataSetChanged();
-						
+					for(int i = 0; i < onPad.getCards().size(); i++){	
+						if(onPad.getCard(i).isPressed()==true){		
+							counter = counter + 1;			
+							if(counter == PRESSED_LIMIT){				
+								setCards = logic.getRules(onPad.getPressedCards());				
+								for(int a = 0; a < onPad.getCards().size(); a++){
+									if(onPad.getCard(a).isPressed()==true){						
+										onPad.getCard(a).pressCard();					
+									}
+								}			
+								if(setCards == true){	
+									sounds.getSound(1);
+									onPad.getThreeCards();	
+								}else{
+									sounds.getSound(2);
+								}
+								im.notifyDataSetChanged();
+							}	
+						}	
 					}
-					
-				}
-				
+					im.notifyDataSetChanged();//Efter att ett kort klickas ska spelplanen ritas om fï¿½r att visa dennna fï¿½rï¿½ndring
+					}
+				});
 			}
-			
-			im.notifyDataSetChanged();//Efter att ett kort klickas ska spelplanen ritas om för att visa dennna förändring
-			
-			}
-		});
-		
-	}
-}
+		}

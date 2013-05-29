@@ -20,27 +20,27 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class ImageAdapter extends BaseAdapter {
-	Context context; //Denna referens till Context fungerar genom att "p�minna" programmet om vad som h�nt. Typ. 
-	private CardsOnPad onPad; //Referens till de kort som skall vara p� paddan, allts� en referens till klassen CardsOnPad 
+	Context context; //Denna referens till Context fungerar genom att "pï¿½minna" programmet om vad som hï¿½nt. Typ. 
+	private CardsOnPad onPad; //Referens till de kort som skall vara pï¿½ paddan, alltsï¿½ en referens till klassen CardsOnPad 
     public ImageAdapter(Context c, CardsOnPad onPad) { // Konstruktor som tar emot och "Startar" info om context och onPad
     	
-    	Log.i("Cirkus","In Adapter ");
+    	Log.i("Cirkus","In Adapter "); //Mark Testar github 29/5
     	this.context = c; 
     	this.onPad = onPad; //Samma lista som i GridTestActivity.
 
     }
 
 	@Override
-	public int getCount() { //Metod f�r att f� antalet kort
+	public int getCount() { //Metod fï¿½r att fï¿½ antalet kort
 		
-		// TODO Ange hur m�nga grejor som skall snurras
+		// TODO Ange hur mï¿½nga grejor som skall snurras
 		Log.i("Cirkus","Antal kort: "+ onPad.getCards().size());
 		return onPad.getCards().size();
 		
 	}
 
 	@Override
-	public Object getItem(int position) { //Logga position f�r ett kort
+	public Object getItem(int position) { //Logga position fï¿½r ett kort
 		
 		Log.i("Cirkus","In getItem" + position);
 		return 0;
@@ -56,24 +56,24 @@ public class ImageAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) { //Denna k�rs f�r varje ruta p� spelplanen
+	public View getView(int position, View convertView, ViewGroup parent) { //Denna kï¿½rs fï¿½r varje ruta pï¿½ spelplanen
 		
 		Log.i("Cirkus","Position: "+position); //Logg
-		ImageView imageView; //V�r imageview som anv�nds f�r att visa bilderna
+		ImageView imageView; //Vï¿½r imageview som anvï¿½nds fï¿½r att visa bilderna
         if (convertView == null) {  //if it's not recycled, initialize some attributes
-            imageView = new ImageView(context); //Koppla v�r context (p�minnelse-grej) med imageviewen
-            imageView.setLayoutParams(new GridView.LayoutParams(230, 230)); //H�r skapar vi det nya elementet med GridView
-            imageView.setScaleType(ImageView.ScaleType.FIT_START);  //Centrera de bilder vi l�gger in
+            imageView = new ImageView(context); //Koppla vï¿½r context (pï¿½minnelse-grej) med imageviewen
+            imageView.setLayoutParams(new GridView.LayoutParams(230, 230)); //Hï¿½r skapar vi det nya elementet med GridView
+            imageView.setScaleType(ImageView.ScaleType.FIT_START);  //Centrera de bilder vi lï¿½gger in
             imageView.setPadding(2, 2, 2, 2); //Fluff
         } else {
-            imageView = (ImageView) convertView; // Om inget har �ndrats �teranv�nder vi gammal bild
+            imageView = (ImageView) convertView; // Om inget har ï¿½ndrats ï¿½teranvï¿½nder vi gammal bild
         }
         
-         Card ca = onPad.getCard(position); //Skapa en Card-klass referens (c) och ge den v�ra kort fr�n CardsOnPad klassen
-         if (ca != null ){ //Om card objektet inte �r tomt s� k�r f�ljande:
-        	 imageView.setImageResource(ca.getCardImage()); //H�R l�gger vi in v�ra kort i imageviewen
-         }else{ //Om card objektet �r tomt
-        	 
+         Card ca = onPad.getCard(position); //Skapa en Card-klass referens (c) och ge den vï¿½ra kort frï¿½n CardsOnPad klassen
+         if (ca != null){ //Om card objektet inte ï¿½r tomt sï¿½ kï¿½r fï¿½ljande:
+        	 imageView.setImageResource(ca.getCardImage()); //Hï¿½R lï¿½gger vi in vï¿½ra kort i imageviewen
+         }else{
+        	
          }
          
          return imageView;

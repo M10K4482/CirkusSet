@@ -2,21 +2,34 @@ package com.example.Model;
 
 public class PointCounter {
 
-	int playerOneScore = 0;
-	boolean setCards;
+	int playerOneScore;
+	int playerTwoScore;
+	int number;
+	boolean kindOfPoints;
 	
-	public void Counter (boolean setCards){
-		this.setCards = setCards;
-		if (setCards == true){
-			playerOneScore =+ 1;
-			System.out.println("player one: "+playerOneScore);
-		}
+	public PointCounter(){
+		playerOneScore = 0;
+		playerTwoScore = 0;
 	}
-	public int getPlayerOneScore(){
+
+	public void setPlayerScore(int number, boolean kindOfPoints){
+		this.number = number;
+		this.kindOfPoints = kindOfPoints;
 		
+		if(kindOfPoints == true){
+			playerOneScore += number;
+		}else if(kindOfPoints == false){
+			playerOneScore -= number;
+		}
+		
+	}
+
+	public int getPlayerOneScore(){
 		return playerOneScore;
 	}
-		
-		
+	
+	public int getPlayerTwoScore(){
+		return playerTwoScore;
+	}
 	
 }

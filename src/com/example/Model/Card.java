@@ -7,21 +7,21 @@ import com.example.Model.Card.CardFill;
 
 public class Card {
 	
-	//F�rdelen med detta �r att man bara kan av�nda dessa orden s� att det inte kan bli missf�rst�nd. L�s om enum
-	public static enum CardAnimal{LION,APE,SEAL}; //Anv�nds f�r att beskriva varje korts typ av djur
-	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Anv�nds f�r att beskriva varje korts bakgrund
-	public static enum CardAmount{ONE,TWO,THREE}; //Anv�nds f�r att beskriva varje korts antal av djur
-	public static enum CardColor{RED,BLUE,GREEN}; //Anv�nds f�r att beskriva varje korts antal av djur
+	//Fï¿½rdelen med detta ï¿½r att man bara kan avï¿½nda dessa orden sï¿½ att det inte kan bli missfï¿½rstï¿½nd. Lï¿½s om enum
+	public static enum CardAnimal{LION,APE,SEAL}; //Anvï¿½nds fï¿½r att beskriva varje korts typ av djur
+	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Anvï¿½nds fï¿½r att beskriva varje korts bakgrund
+	public static enum CardAmount{ONE,TWO,THREE}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
+	public static enum CardColor{RED,BLUE,GREEN}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
 	
-	private int cardPressed; //Ett v�rde som kommer anv�ndas f�r att spara id f�r ett nertryckt kort
-	private int cardNormal; //Ett v�rde som kommer anv�ndas f�r att spara id f�r ett normallt kort
-	private CardFill fill; //H�r s�ger vi att vi bara accepterar v�ra fyllnader
+	private int cardPressed; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett nertryckt kort
+	private int cardNormal; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett normallt kort
+	private CardFill fill; //Hï¿½r sï¿½ger vi att vi bara accepterar vï¿½ra fyllnader
 	private CardAnimal animal;
 	private CardAmount amount;
 	private CardColor color;
-    private boolean isPressed; //En true/false f�r att senare kunna avg�ra om ett kort tryckts eller ej
+    private boolean isPressed; //En true/false fï¿½r att senare kunna avgï¿½ra om ett kort tryckts eller ej
     
-	/**En konstruktor d�r man skapar ett kort och sparar bilder (eller r.id.xx f�r bilderna) samt typen av bild*/
+	/**En konstruktor dï¿½r man skapar ett kort och sparar bilder (eller r.id.xx fï¿½r bilderna) samt typen av bild*/
 	public Card(int cardNormal, int cardPressed, CardFill fill, CardAnimal animal, CardColor color, CardAmount amount) {
 
 		//lagra i privata instansvariabler
@@ -31,9 +31,10 @@ public class Card {
 		this.fill = fill;
 		this.amount = amount;
 		this.color = color;
+		
 	}
 
-	public int getCardImage() { //H�r s�tts bilden (tryckt eller normal) som ska ritas ut f�r ett visst kort	
+	public int getCardImage() { //Hï¿½r sï¿½tts bilden (tryckt eller normal) som ska ritas ut fï¿½r ett visst kort	
 		int cardImage = cardNormal;
 		if (isPressed){
 			cardImage = cardPressed;
@@ -41,7 +42,7 @@ public class Card {
 		return cardImage;	
 	}
 	
-	//Dessa "get..." metoder anv�nds f�r att returnera typerna f�r varje objekt (kort allts�)
+	//Dessa "get..." metoder anvï¿½nds fï¿½r att returnera typerna fï¿½r varje objekt (kort alltsï¿½)
 	public CardFill getCardFill() {
 		return fill;
 	}
@@ -58,13 +59,12 @@ public class Card {
 		return color;
 	}
 	
-	public void pressCard(){ //N�r ett kort trycks anropas denna metod f�r det tryckta objektet (kortet)	
-		isPressed =! isPressed; //Byter true och false beroende p� vad det f�r tillf�llet �r 
+	public void pressCard(){ //Nï¿½r ett kort trycks anropas denna metod fï¿½r det tryckta objektet (kortet)	
+		isPressed =! isPressed; //Byter true och false beroende pï¿½ vad det fï¿½r tillfï¿½llet ï¿½r 
 	}
 
 	public boolean isPressed(){ //Returnera true/false 
 		return isPressed;
 	}
-	
 	
 }

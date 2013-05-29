@@ -24,7 +24,7 @@ public class ImageAdapter extends BaseAdapter {
 	private CardsOnPad onPad; //Referens till de kort som skall vara p� paddan, allts� en referens till klassen CardsOnPad 
     public ImageAdapter(Context c, CardsOnPad onPad) { // Konstruktor som tar emot och "Startar" info om context och onPad
     	
-    	Log.i("Cirkus","In Adapter ");
+    	Log.i("Cirkus","In Adapter "); //Mark Testar github 29/5
     	this.context = c; 
     	this.onPad = onPad; //Samma lista som i GridTestActivity.
 

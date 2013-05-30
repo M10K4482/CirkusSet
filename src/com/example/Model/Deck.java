@@ -88,7 +88,7 @@ public class Deck {
 		
 		/*39*/myDeck.add(new Card(R.drawable.pinktstripe_oneseal,R.drawable.pink_stripes_seal1,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*40*/myDeck.add(new Card(R.drawable.pinkstripe_twoseal,R.drawable.pink_stripes_seal2,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*42*/myDeck.add(new Card(R.drawable.pinkdot_oneseal,R.drawable.pink_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*43*/myDeck.add(new Card(R.drawable.pinkdot_twoseal,R.drawable.pink_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
@@ -280,7 +280,7 @@ public class Deck {
 		
 		/*39*/myDeck.add(new Card(R.drawable.pinktstripe_oneseal,R.drawable.pink_stripes_seal1,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*40*/myDeck.add(new Card(R.drawable.pinkstripe_twoseal,R.drawable.pink_stripes_seal2,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
 		
 		/*42*/myDeck.add(new Card(R.drawable.pinkdot_oneseal,R.drawable.pink_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
 		/*43*/myDeck.add(new Card(R.drawable.pinkdot_twoseal,R.drawable.pink_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));

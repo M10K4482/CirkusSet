@@ -291,9 +291,9 @@ public class Deck {
 		/*46*/myDeck.add(new Card(R.drawable.greenfill_twoseal,R.drawable.green_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
 		/*47*/myDeck.add(new Card(R.drawable.greenfill_threeseal,R.drawable.green_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
 		/*51*/myDeck.add(new Card(R.drawable.greendot_oneseal,R.drawable.green_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
 		/*52*/myDeck.add(new Card(R.drawable.greendot_twoseal,R.drawable.green_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));

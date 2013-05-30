@@ -1,6 +1,7 @@
 package com.example.cirkusset;
 
 import com.example.Model.Card;
+
 import com.example.Model.CardsOnPad;
 import com.example.Model.Deck;
 import com.example.Model.PointCounter;
@@ -10,7 +11,11 @@ import com.example.cirkusset.ImageAdapter;
 import com.example.cirkusset.MainActivity;
 import com.example.experiment.R;
 
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
@@ -18,14 +23,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.MediaController;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnCompletionListener{
 	
 	private GridView gr; //Skapa en referens (gridview)
 	private ImageAdapter im; //Skapa en referens (im) så att man kan komma åt ImageAdapter klassen
@@ -39,11 +49,25 @@ public class MainActivity extends Activity {
 	private SoundPlayer sounds;
 	private PointCounter points;
 	
+	TextView text; // visa nedräkning
+
+	private VideoView mVideoView;
+	private ImageButton knapp;
+	private Animation lollipopbounce;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
+		
+		mVideoView = (VideoView) findViewById(R.id.surface_view);
+		knapp = (ImageButton) findViewById(R.id.imageButton2);
+		mVideoView.setOnCompletionListener(this);
+		// animation
+		lollipopbounce = AnimationUtils.loadAnimation(this,
+				R.anim.lollipopbounce);
+		restart();
 		
 		this.shuffleButton = (ImageButton)this.findViewById(R.id.imageButton1);
 		  this.shuffleButton.setOnClickListener(new OnClickListener() {
@@ -98,4 +122,60 @@ public class MainActivity extends Activity {
 					}
 				});
 			}
+	
+	private void restart() {
+		mVideoView.setVisibility(VideoView.INVISIBLE);
+		knapp.setAlpha(0f);
+		MyCount counter = new MyCount(20000, 1000);
+		counter.start();
+	}
+	//Videospelaren for animationen
+	private void runvideo() {
+		mVideoView.setVisibility(VideoView.VISIBLE);
+		mVideoView = (VideoView) findViewById(R.id.surface_view);
+		mVideoView.setVideoURI(Uri.parse("android.resource://"
+				+ getPackageName() + "/" + R.raw.denanimation));
+		mVideoView.setMediaController(new MediaController(this));
+		mVideoView.requestFocus();
+		mVideoView.start();
+
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+	}
+
+	// RäknarN
+	public class MyCount extends CountDownTimer {
+		public MyCount(long millisInFuture, long countDownInterval) {
+			super(millisInFuture, countDownInterval);
 		}
+		//Nar tiden ar ute sa spelas filmen o knappen dyker upp
+		@Override
+		public void onFinish() {
+			text.setText("Stopp!");
+			//knapp.setAlpha(1.0f);
+			
+			runvideo();
+		}
+
+		@Override
+		public void onTick(long millisUntilFinished) {
+			text = (TextView) findViewById(R.id.tv);
+			text.setText("Tid kvar: " + millisUntilFinished / 1000);	
+		}
+	}
+
+	public void onCompletion(MediaPlayer mp) {
+		knapp.setAlpha(1.0f);
+		knapp.startAnimation(lollipopbounce);
+		Log.i("plap", "I onCompletion");	
+	}
+	//Nar man trycker pa spela-knappen onClick du vet
+	public void restartClick(View v) {
+		restart();
+	}
+	
+	}

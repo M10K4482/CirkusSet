@@ -16,137 +16,127 @@ public class Deck {
 		myDeck = new ArrayList<Card>();	
 		//Skapa alla korten
 		
-		//Här läggs alla de kort som skrivs ut första gången, la dem här så att man kunde kalla på dem via 0-8 i getNbrOfCards metoden!
-		/*4*/Card c = new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
+		//FIRST DECK-CARDS:
+		/*1*/Card c = new Card(R.drawable.green_lion_clean_2,R.drawable.green_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO);
 		myDeck.add(c);
-		/*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*31*/myDeck.add(new Card(R.drawable.turkossalprickar2,R.drawable.blue_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		/*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		//Här ovanför läggs alla de kort som skrivs ut första gången, la dem här så att man kunde kalla på dem via 0-8 i getNbrOfCards metoden!
+		/*2*/myDeck.add(new Card(R.drawable.pink_lion_clean_2,R.drawable.pink_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*3*/myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*4*/myDeck.add(new Card(R.drawable.pink_ape_clean_2,R.drawable.pink_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*5*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_3,R.drawable.turquois_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+		/*6*/myDeck.add(new Card(R.drawable.green_lion_dots_1,R.drawable.green_lion_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*7*/myDeck.add(new Card(R.drawable.turquois_lion_clean_1,R.drawable.turquois_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*8*/myDeck.add(new Card(R.drawable.pink_ape_stripes_1,R.drawable.pink_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*9*/myDeck.add(new Card(R.drawable.turquois_seal_clean_1,R.drawable.turquois_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
 		
-		//LEJON GRÖN:
-		/*0*/myDeck.add(new Card(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*1*/myDeck.add(new Card(R.drawable.greenlejonstreck2,R.drawable.green_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*2*/myDeck.add(new Card(R.drawable.greenlejonstreck3,R.drawable.green_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		//LION GREEN:
+		/*10*/myDeck.add(new Card(R.drawable.green_lion_stripes_1,R.drawable.green_lion_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*11*/myDeck.add(new Card(R.drawable.green_lion_stripes_2,R.drawable.green_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*12*/myDeck.add(new Card(R.drawable.green_lion_stripes_3,R.drawable.green_lion_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*3*/myDeck.add(new Card(R.drawable.greenlejonkort1,R.drawable.green_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		///*4*/myDeck.add(new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*5*/myDeck.add(new Card(R.drawable.greenlejonkort3,R.drawable.green_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*13*/myDeck.add(new Card(R.drawable.green_lion_clean_1,R.drawable.green_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*14*/myDeck.add(new Card(R.drawable.green_lion_clean_3,R.drawable.green_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		///*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*7*/myDeck.add(new Card(R.drawable.greenlejonprickar2,R.drawable.green_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*8*/myDeck.add(new Card(R.drawable.greenlejonprickar3,R.drawable.green_dots_lion3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*15*/myDeck.add(new Card(R.drawable.green_lion_dots_2,R.drawable.green_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*16*/myDeck.add(new Card(R.drawable.green_lion_dots_3,R.drawable.green_lion_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		//LEJON BLÃ…:
-		///*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*10*/myDeck.add(new Card(R.drawable.turkoslejonkort2,R.drawable.blue_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*11*/myDeck.add(new Card(R.drawable.turkoslejonkort3,R.drawable.blue_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		//LION TURQUOIS:
+		/*17*/myDeck.add(new Card(R.drawable.turquois_lion_clean_2,R.drawable.turquois_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*18*/myDeck.add(new Card(R.drawable.turquois_lion_clean_3,R.drawable.turquois_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*12*/myDeck.add(new Card(R.drawable.turkoslejonprickar1,R.drawable.blue_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*13*/myDeck.add(new Card(R.drawable.turkoslejonprickar2,R.drawable.blue_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*14*/myDeck.add(new Card(R.drawable.turkoslejonprickar3,R.drawable.blue_dots_lion3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*19*/myDeck.add(new Card(R.drawable.turquois_lion_dots_1,R.drawable.turquois_lion_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*20*/myDeck.add(new Card(R.drawable.turquois_lion_dots_2,R.drawable.turquois_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*21*/myDeck.add(new Card(R.drawable.turquois_lion_dots_3,R.drawable.turquois_lion_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*15*/myDeck.add(new Card(R.drawable.turkoslejonstreck1,R.drawable.blue_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*16*/myDeck.add(new Card(R.drawable.turkoslejonstreck2,R.drawable.blue_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*17*/myDeck.add(new Card(R.drawable.turkoslejonstreck3,R.drawable.blue_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*22*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_1,R.drawable.turquois_lion_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*23*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_2,R.drawable.turquois_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*24*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_3,R.drawable.turquois_lion_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		//LEJON RÃ–D:
-		/*18*/myDeck.add(new Card(R.drawable.rosalejonkort1,R.drawable.pink_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
-		///*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*20*/myDeck.add(new Card(R.drawable.rosalejonkort3,R.drawable.pink_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.THREE));
+		//LION RED:
+		/*25*/myDeck.add(new Card(R.drawable.pink_lion_clean_1,R.drawable.pink_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*26*/myDeck.add(new Card(R.drawable.pink_lion_clean_3,R.drawable.pink_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		/*21*/myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*22*/myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
-		/*23*/myDeck.add(new Card(R.drawable.rosalejonprickar1,R.drawable.pink_dots_lion1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
+		/*27*/myDeck.add(new Card(R.drawable.pink_lion_dots_1,R.drawable.pink_lion_dots_1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.ONE));
+		/*28*/myDeck.add(new Card(R.drawable.pink_lion_dots_2,R.drawable.pink_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*29*/myDeck.add(new Card(R.drawable.pink_lion_dots_3,R.drawable.pink_lion_dots_3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.THREE));
 		
-		/*24*/myDeck.add(new Card(R.drawable.rosalejonstreck2,R.drawable.pink_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*25*/myDeck.add(new Card(R.drawable.rosalejonstreck3,R.drawable.pink_stripes_lion3_click,Card. CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
-		/*26*/myDeck.add(new Card(R.drawable.rosalejonstreck1,R.drawable.pink_stripes_lion1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
+		/*30*/myDeck.add(new Card(R.drawable.pink_lion_stripes_1,R.drawable.pink_lion_stripes_1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.ONE));
+		/*31*/myDeck.add(new Card(R.drawable.pink_lion_stripes_2,R.drawable.pink_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*32*/myDeck.add(new Card(R.drawable.pink_lion_stripes_3,R.drawable.pink_lion_stripes_3_click,Card. CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.THREE));
 		
-		//SÃ„L BLÃ…
-		///*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*28*/myDeck.add(new Card(R.drawable.turkossalkort2,R.drawable.blue_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*29*/myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		//SEAL TURQUOIS
+		/*33*/myDeck.add(new Card(R.drawable.turquois_lion_clean_2,R.drawable.turquois_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*34*/myDeck.add(new Card(R.drawable.turquois_lion_clean_3,R.drawable.turquois_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*30*/myDeck.add(new Card(R.drawable.turkossalprickar1,R.drawable.blue_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*31*/myDeck.add(new Card(R.drawable.turkossalprickar2,R.drawable.blue_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*32*/myDeck.add(new Card(R.drawable.turkossalprickar3,R.drawable.blue_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*35*/myDeck.add(new Card(R.drawable.turquois_seal_dots_1,R.drawable.turquois_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*36*/myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*37*/myDeck.add(new Card(R.drawable.turquois_seal_dots_3,R.drawable.turquois_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*33*/myDeck.add(new Card(R.drawable.turkossalstreck1,R.drawable.blue_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*34*/myDeck.add(new Card(R.drawable.turkossalstreck2,R.drawable.blue_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		///*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*38*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_1,R.drawable.turquois_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*39*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_2,R.drawable.turquois_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
 		
-		//SÃ„L RÃ–D:
-		/*36*/myDeck.add(new Card(R.drawable.rosasalkort1,R.drawable.pink_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*37*/myDeck.add(new Card(R.drawable.rosasalkort2,R.drawable.pink_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*38*/myDeck.add(new Card(R.drawable.rosasalkort3,R.drawable.pink_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		//SEAL RED:
+		/*40*/myDeck.add(new Card(R.drawable.pink_seal_clean_1,R.drawable.pink_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*41*/myDeck.add(new Card(R.drawable.pink_seal_clean_2,R.drawable.pink_seal_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*42*/myDeck.add(new Card(R.drawable.pink_seal_clean_3,R.drawable.pink_seal_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		/*39*/myDeck.add(new Card(R.drawable.pinktstripe_oneseal,R.drawable.pink_stripes_seal1,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*40*/myDeck.add(new Card(R.drawable.pinkstripe_twoseal,R.drawable.pink_stripes_seal2,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*43*/myDeck.add(new Card(R.drawable.pink_seal_stripes_1,R.drawable.pink_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*44*/myDeck.add(new Card(R.drawable.pink_seal_stripes_2,R.drawable.pink_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*45*/myDeck.add(new Card(R.drawable.pink_seal_stripes_3,R.drawable.pink_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		/*42*/myDeck.add(new Card(R.drawable.pinkdot_oneseal,R.drawable.pink_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*43*/myDeck.add(new Card(R.drawable.pinkdot_twoseal,R.drawable.pink_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*44*/myDeck.add(new Card(R.drawable.rosasalprickar3,R.drawable.pink_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*46*/myDeck.add(new Card(R.drawable.pink_seal_dots_1,R.drawable.pink_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*47*/myDeck.add(new Card(R.drawable.pink_seal_dots_2,R.drawable.pink_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*48*/myDeck.add(new Card(R.drawable.pink_seal_dots_3,R.drawable.pink_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		//SÃ„L GRÃ–N:
-		/*45*/myDeck.add(new Card(R.drawable.greenfill_oneseal,R.drawable.green_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*46*/myDeck.add(new Card(R.drawable.greenfill_twoseal,R.drawable.green_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*47*/myDeck.add(new Card(R.drawable.greenfill_threeseal,R.drawable.green_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		//SEAL GREEN:
+		/*49*/myDeck.add(new Card(R.drawable.green_seal_clean_1,R.drawable.green_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*50*/myDeck.add(new Card(R.drawable.green_seal_clean_2,R.drawable.green_seal_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*51*/myDeck.add(new Card(R.drawable.green_seal_clean_3,R.drawable.green_seal_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*52*/myDeck.add(new Card(R.drawable.green_seal_stripes_1,R.drawable.green_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*53*/myDeck.add(new Card(R.drawable.green_seal_stripes_2,R.drawable.green_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*54*/myDeck.add(new Card(R.drawable.green_seal_stripes_3,R.drawable.green_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*51*/myDeck.add(new Card(R.drawable.greendot_oneseal,R.drawable.green_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*52*/myDeck.add(new Card(R.drawable.greendot_twoseal,R.drawable.green_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*53*/myDeck.add(new Card(R.drawable.greendot_threeseal,R.drawable.green_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));		
+		/*55*/myDeck.add(new Card(R.drawable.green_seal_dots_1,R.drawable.green_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*56*/myDeck.add(new Card(R.drawable.green_seal_dots_2,R.drawable.green_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*57*/myDeck.add(new Card(R.drawable.green_seal_dots_3,R.drawable.green_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));		
 		
-		//APA RÃ–D:
-		/*54*/myDeck.add(new Card(R.drawable.rosaapaprickar1,R.drawable.pink_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*55*/myDeck.add(new Card(R.drawable.rosaapaprickar2,R.drawable.pink_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*56*/myDeck.add(new Card(R.drawable.rosaapaprickar3,R.drawable.pink_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
+		//APE RED:
+		/*58*/myDeck.add(new Card(R.drawable.pink_ape_dots_1,R.drawable.pink_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*59*/myDeck.add(new Card(R.drawable.pink_ape_dots_2,R.drawable.pink_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*60*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		/*57*/myDeck.add(new Card(R.drawable.pinkfill_onemonkey,R.drawable.pink_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		///*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*59*/myDeck.add(new Card(R.drawable.pinkfill_threemonkey,R.drawable.pink_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*61*/myDeck.add(new Card(R.drawable.pink_ape_clean_1,R.drawable.pink_ape_dots_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*62*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		///*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*61*/myDeck.add(new Card(R.drawable.rosaapastreck2,R.drawable.pink_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*62*/myDeck.add(new Card(R.drawable.rosaapastreck3,R.drawable.pink_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
+		/*63*/myDeck.add(new Card(R.drawable.pink_ape_stripes_2,R.drawable.pink_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*64*/myDeck.add(new Card(R.drawable.pink_ape_stripes_3,R.drawable.pink_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		//APA BLÃ…:
-		/*63*/myDeck.add(new Card(R.drawable.turkosapaprickar1,R.drawable.blue_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*64*/myDeck.add(new Card(R.drawable.turkosapaprickar2,R.drawable.blue_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*65*/myDeck.add(new Card(R.drawable.turkosapaprickar3,R.drawable.blue_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		//APE TURQUOIS:
+		/*65*/myDeck.add(new Card(R.drawable.turquois_ape_dots_1,R.drawable.turquois_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*66*/myDeck.add(new Card(R.drawable.turquois_ape_dots_2,R.drawable.turquois_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*67*/myDeck.add(new Card(R.drawable.turquois_ape_dots_3,R.drawable.turquois_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*66*/myDeck.add(new Card(R.drawable.turkosapakort1,R.drawable.blue_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*67*/myDeck.add(new Card(R.drawable.turkosapakort2,R.drawable.blue_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*68*/myDeck.add(new Card(R.drawable.turkosapakort3,R.drawable.blue_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));
+		/*68*/myDeck.add(new Card(R.drawable.turquois_ape_clean_1,R.drawable.turquois_ape_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*69*/myDeck.add(new Card(R.drawable.turquois_ape_clean_2,R.drawable.turquois_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*70*/myDeck.add(new Card(R.drawable.turquois_ape_clean_3,R.drawable.turquois_ape_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
-		/*69*/myDeck.add(new Card(R.drawable.turkosapastreck1,R.drawable.blue_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*70*/myDeck.add(new Card(R.drawable.turkosapastreck2,R.drawable.blue_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*71*/myDeck.add(new Card(R.drawable.turkosapastreck3,R.drawable.blue_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));	
+		/*71*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_1,R.drawable.turquois_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*72*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_2,R.drawable.turquois_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*73*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_3,R.drawable.turquois_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));	
 		
-		//APA GRÃ–N:
-		/*72*/myDeck.add(new Card(R.drawable.greenapaprickar1,R.drawable.green_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*73*/myDeck.add(new Card(R.drawable.greenapaprickar2,R.drawable.green_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*74*/myDeck.add(new Card(R.drawable.greenapaprickar3,R.drawable.green_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		//APE GREEN:
+		/*74*/myDeck.add(new Card(R.drawable.green_ape_dots_1,R.drawable.green_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*75*/myDeck.add(new Card(R.drawable.green_ape_dots_2,R.drawable.green_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*76*/myDeck.add(new Card(R.drawable.green_ape_dots_3,R.drawable.green_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*75*/myDeck.add(new Card(R.drawable.greenapakort1,R.drawable.green_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*76*/myDeck.add(new Card(R.drawable.greenapakort2,R.drawable.green_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*77*/myDeck.add(new Card(R.drawable.greenapakort3,R.drawable.green_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
+		/*77*/myDeck.add(new Card(R.drawable.green_ape_clean_1,R.drawable.green_ape_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*78*/myDeck.add(new Card(R.drawable.green_ape_clean_2,R.drawable.green_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*79*/myDeck.add(new Card(R.drawable.green_ape_clean_3,R.drawable.green_ape_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
 		
-		/*78*/myDeck.add(new Card(R.drawable.greenapastreck1,R.drawable.green_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*79*/myDeck.add(new Card(R.drawable.greenapastreck2,R.drawable.green_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*80*/myDeck.add(new Card(R.drawable.greenapastreck3,R.drawable.green_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));	
-		
-		//OSV fï¿½r alla kort
+		/*80*/myDeck.add(new Card(R.drawable.green_ape_stripes_1,R.drawable.green_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*81*/myDeck.add(new Card(R.drawable.green_ape_stripes_2,R.drawable.green_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*82*/myDeck.add(new Card(R.drawable.green_ape_stripes_3,R.drawable.green_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));	
+
 	}
 	
 	public void shuffle(){ //Här blandas kortleken
@@ -209,133 +199,127 @@ public class Deck {
 	}
 	
 	public void reloadDeck(){		
-		/*4*/Card c = new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO); //Ett kort (alltsï¿½ ett objekt av typen Card) skapas
+		
+		//FIRST DECK-CARDS:
+		/*1*/Card c = new Card(R.drawable.green_lion_clean_2,R.drawable.green_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO);
 		myDeck.add(c);
-		/*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*31*/myDeck.add(new Card(R.drawable.turkossalprickar2,R.drawable.blue_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		/*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		//Här ovanför läggs alla de kort som skrivs ut första gången, la dem här så att man kunde kalla på dem via 0-8 i getNbrOfCards metoden!
-		
-		//LEJON GRÖN:
-		/*0*/myDeck.add(new Card(R.drawable.greenlejonstreck1,R.drawable.green_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*1*/myDeck.add(new Card(R.drawable.greenlejonstreck2,R.drawable.green_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*2*/myDeck.add(new Card(R.drawable.greenlejonstreck3,R.drawable.green_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		/*3*/myDeck.add(new Card(R.drawable.greenlejonkort1,R.drawable.green_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		///*4*/myDeck.add(new Card(R.drawable.greenlejonkort2,R.drawable.green_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*5*/myDeck.add(new Card(R.drawable.greenlejonkort3,R.drawable.green_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		///*6*/myDeck.add(new Card(R.drawable.greenlejonprickar1,R.drawable.green_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*7*/myDeck.add(new Card(R.drawable.greenlejonprickar2,R.drawable.green_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*8*/myDeck.add(new Card(R.drawable.greenlejonprickar3,R.drawable.green_dots_lion3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		//LEJON BLÃ…:
-		///*9*/myDeck.add(new Card(R.drawable.turkoslejonkort1,R.drawable.blue_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*10*/myDeck.add(new Card(R.drawable.turkoslejonkort2,R.drawable.blue_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*11*/myDeck.add(new Card(R.drawable.turkoslejonkort3,R.drawable.blue_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*12*/myDeck.add(new Card(R.drawable.turkoslejonprickar1,R.drawable.blue_dots_lion1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*13*/myDeck.add(new Card(R.drawable.turkoslejonprickar2,R.drawable.blue_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*14*/myDeck.add(new Card(R.drawable.turkoslejonprickar3,R.drawable.blue_dots_lion3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*15*/myDeck.add(new Card(R.drawable.turkoslejonstreck1,R.drawable.blue_stripes_lion1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*16*/myDeck.add(new Card(R.drawable.turkoslejonstreck2,R.drawable.blue_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*17*/myDeck.add(new Card(R.drawable.turkoslejonstreck3,R.drawable.blue_stripes_lion3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		//LEJON RÃ–D:
-		/*18*/myDeck.add(new Card(R.drawable.rosalejonkort1,R.drawable.pink_filled_lion1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.ONE));
-		///*19*/myDeck.add(new Card(R.drawable.rosalejonkort2,R.drawable.pink_filled_lion2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*20*/myDeck.add(new Card(R.drawable.rosalejonkort3,R.drawable.pink_filled_lion3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		/*21*/myDeck.add(new Card(R.drawable.rosalejonprickar2,R.drawable.pink_dots_lion2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*22*/myDeck.add(new Card(R.drawable.rosalejonprickar3,R.drawable.pink_dots_lion3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
-		/*23*/myDeck.add(new Card(R.drawable.rosalejonprickar1,R.drawable.pink_dots_lion1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
-		
-		/*24*/myDeck.add(new Card(R.drawable.rosalejonstreck2,R.drawable.pink_stripes_lion2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*25*/myDeck.add(new Card(R.drawable.rosalejonstreck3,R.drawable.pink_stripes_lion3_click,Card. CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.THREE));
-		/*26*/myDeck.add(new Card(R.drawable.rosalejonstreck1,R.drawable.pink_stripes_lion1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.RED, Card.CardAmount.ONE));
-		
-		//SÃ„L BLÃ…
-		///*27*/myDeck.add(new Card(R.drawable.turkossalkort1,R.drawable.blue_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*28*/myDeck.add(new Card(R.drawable.turkossalkort2,R.drawable.blue_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*29*/myDeck.add(new Card(R.drawable.turkossalkort3,R.drawable.blue_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*30*/myDeck.add(new Card(R.drawable.turkossalprickar1,R.drawable.blue_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*31*/myDeck.add(new Card(R.drawable.turkossalprickar2,R.drawable.blue_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*32*/myDeck.add(new Card(R.drawable.turkossalprickar3,R.drawable.blue_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*33*/myDeck.add(new Card(R.drawable.turkossalstreck1,R.drawable.blue_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*34*/myDeck.add(new Card(R.drawable.turkossalstreck2,R.drawable.blue_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		///*35*/myDeck.add(new Card(R.drawable.turkossalstreck3,R.drawable.blue_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		//SÃ„L RÃ–D:
-		/*36*/myDeck.add(new Card(R.drawable.rosasalkort1,R.drawable.pink_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*37*/myDeck.add(new Card(R.drawable.rosasalkort2,R.drawable.pink_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*38*/myDeck.add(new Card(R.drawable.rosasalkort3,R.drawable.pink_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		/*39*/myDeck.add(new Card(R.drawable.pinktstripe_oneseal,R.drawable.pink_stripes_seal1,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*40*/myDeck.add(new Card(R.drawable.pinkstripe_twoseal,R.drawable.pink_stripes_seal2,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*41*/myDeck.add(new Card(R.drawable.rosasalstreck3,R.drawable.pink_stripes_seal3,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		/*42*/myDeck.add(new Card(R.drawable.pinkdot_oneseal,R.drawable.pink_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*43*/myDeck.add(new Card(R.drawable.pinkdot_twoseal,R.drawable.pink_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*44*/myDeck.add(new Card(R.drawable.rosasalprickar3,R.drawable.pink_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		//SÃ„L GRÃ–N:
-		/*45*/myDeck.add(new Card(R.drawable.greenfill_oneseal,R.drawable.green_filled_seal1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*46*/myDeck.add(new Card(R.drawable.greenfill_twoseal,R.drawable.green_filled_seal2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*47*/myDeck.add(new Card(R.drawable.greenfill_threeseal,R.drawable.green_filled_seal3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		/*48*/myDeck.add(new Card(R.drawable.greenstripe_oneseal,R.drawable.green_stripes_seal1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*49*/myDeck.add(new Card(R.drawable.greenstripe_twoseal,R.drawable.green_stripes_seal2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*50*/myDeck.add(new Card(R.drawable.greenstripe_threeseal,R.drawable.green_stripes_seal3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		/*51*/myDeck.add(new Card(R.drawable.greendot_oneseal,R.drawable.green_dots_seal1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*52*/myDeck.add(new Card(R.drawable.greendot_twoseal,R.drawable.green_dots_seal2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*53*/myDeck.add(new Card(R.drawable.greendot_threeseal,R.drawable.green_dots_seal3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));		
-		
-		//APA RÃ–D:
-		/*54*/myDeck.add(new Card(R.drawable.rosaapaprickar1,R.drawable.pink_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*55*/myDeck.add(new Card(R.drawable.rosaapaprickar2,R.drawable.pink_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*56*/myDeck.add(new Card(R.drawable.rosaapaprickar3,R.drawable.pink_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		/*57*/myDeck.add(new Card(R.drawable.pinkfill_onemonkey,R.drawable.pink_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		///*58*/myDeck.add(new Card(R.drawable.pinkfill_twomonkey,R.drawable.pink_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*59*/myDeck.add(new Card(R.drawable.pinkfill_threemonkey,R.drawable.pink_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		///*60*/myDeck.add(new Card(R.drawable.rosaapastreck1,R.drawable.pink_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.ONE));
-		/*61*/myDeck.add(new Card(R.drawable.rosaapastreck2,R.drawable.pink_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.TWO));
-		/*62*/myDeck.add(new Card(R.drawable.rosaapastreck3,R.drawable.pink_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.RED,Card.CardAmount.THREE));
-		
-		//APA BLÃ…:
-		/*63*/myDeck.add(new Card(R.drawable.turkosapaprickar1,R.drawable.blue_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*64*/myDeck.add(new Card(R.drawable.turkosapaprickar2,R.drawable.blue_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*65*/myDeck.add(new Card(R.drawable.turkosapaprickar3,R.drawable.blue_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*66*/myDeck.add(new Card(R.drawable.turkosapakort1,R.drawable.blue_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*67*/myDeck.add(new Card(R.drawable.turkosapakort2,R.drawable.blue_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*68*/myDeck.add(new Card(R.drawable.turkosapakort3,R.drawable.blue_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));
-		
-		/*69*/myDeck.add(new Card(R.drawable.turkosapastreck1,R.drawable.blue_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.ONE));
-		/*70*/myDeck.add(new Card(R.drawable.turkosapastreck2,R.drawable.blue_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.TWO));
-		/*71*/myDeck.add(new Card(R.drawable.turkosapastreck3,R.drawable.blue_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.BLUE,Card.CardAmount.THREE));	
-		
-		//APA GRÃ–N:
-		/*72*/myDeck.add(new Card(R.drawable.greenapaprickar1,R.drawable.green_dots_monkey1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*73*/myDeck.add(new Card(R.drawable.greenapaprickar2,R.drawable.green_dots_monkey2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*74*/myDeck.add(new Card(R.drawable.greenapaprickar3,R.drawable.green_dots_monkey3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		/*75*/myDeck.add(new Card(R.drawable.greenapakort1,R.drawable.green_filled_monkey1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*76*/myDeck.add(new Card(R.drawable.greenapakort2,R.drawable.green_filled_monkey2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*77*/myDeck.add(new Card(R.drawable.greenapakort3,R.drawable.green_filled_monkey3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
-		
-		/*78*/myDeck.add(new Card(R.drawable.greenapastreck1,R.drawable.green_stripes_monkey1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
-		/*79*/myDeck.add(new Card(R.drawable.greenapastreck2,R.drawable.green_stripes_monkey2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
-		/*80*/myDeck.add(new Card(R.drawable.greenapastreck3,R.drawable.green_stripes_monkey3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));		
+		/*2*/myDeck.add(new Card(R.drawable.pink_lion_clean_2,R.drawable.pink_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*3*/myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*4*/myDeck.add(new Card(R.drawable.pink_ape_clean_2,R.drawable.pink_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*5*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_3,R.drawable.turquois_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+		/*6*/myDeck.add(new Card(R.drawable.green_lion_dots_1,R.drawable.green_lion_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*7*/myDeck.add(new Card(R.drawable.turquois_lion_clean_1,R.drawable.turquois_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*8*/myDeck.add(new Card(R.drawable.pink_ape_stripes_1,R.drawable.pink_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*9*/myDeck.add(new Card(R.drawable.turquois_seal_clean_1,R.drawable.turquois_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+				
+		//LION GREEN:
+		/*10*/myDeck.add(new Card(R.drawable.green_lion_stripes_1,R.drawable.green_lion_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*11*/myDeck.add(new Card(R.drawable.green_lion_stripes_2,R.drawable.green_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*12*/myDeck.add(new Card(R.drawable.green_lion_stripes_3,R.drawable.green_lion_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*13*/myDeck.add(new Card(R.drawable.green_lion_clean_1,R.drawable.green_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*14*/myDeck.add(new Card(R.drawable.green_lion_clean_3,R.drawable.green_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*15*/myDeck.add(new Card(R.drawable.green_lion_dots_2,R.drawable.green_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*16*/myDeck.add(new Card(R.drawable.green_lion_dots_3,R.drawable.green_lion_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		//LION TURQUOIS:
+		/*17*/myDeck.add(new Card(R.drawable.turquois_lion_clean_2,R.drawable.turquois_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*18*/myDeck.add(new Card(R.drawable.turquois_lion_clean_3,R.drawable.turquois_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*19*/myDeck.add(new Card(R.drawable.turquois_lion_dots_1,R.drawable.turquois_lion_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*20*/myDeck.add(new Card(R.drawable.turquois_lion_dots_2,R.drawable.turquois_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*21*/myDeck.add(new Card(R.drawable.turquois_lion_dots_3,R.drawable.turquois_lion_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*22*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_1,R.drawable.turquois_lion_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*23*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_2,R.drawable.turquois_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*24*/myDeck.add(new Card(R.drawable.turquois_lion_stripes_3,R.drawable.turquois_lion_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		//LION RED:
+		/*25*/myDeck.add(new Card(R.drawable.pink_lion_clean_1,R.drawable.pink_lion_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*26*/myDeck.add(new Card(R.drawable.pink_lion_clean_3,R.drawable.pink_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		/*27*/myDeck.add(new Card(R.drawable.pink_lion_dots_1,R.drawable.pink_lion_dots_1_click, Card.CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.ONE));
+		/*28*/myDeck.add(new Card(R.drawable.pink_lion_dots_2,R.drawable.pink_lion_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*29*/myDeck.add(new Card(R.drawable.pink_lion_dots_3,R.drawable.pink_lion_dots_3_click,Card. CardFill.DOTS, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.THREE));
+				
+		/*30*/myDeck.add(new Card(R.drawable.pink_lion_stripes_1,R.drawable.pink_lion_stripes_1_click, Card.CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.ONE));
+		/*31*/myDeck.add(new Card(R.drawable.pink_lion_stripes_2,R.drawable.pink_lion_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.LION,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*32*/myDeck.add(new Card(R.drawable.pink_lion_stripes_3,R.drawable.pink_lion_stripes_3_click,Card. CardFill.STRIPES, Card.CardAnimal.LION, Card.CardColor.PINK, Card.CardAmount.THREE));
+				
+		//SEAL TURQUOIS
+		/*33*/myDeck.add(new Card(R.drawable.turquois_lion_clean_2,R.drawable.turquois_lion_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*34*/myDeck.add(new Card(R.drawable.turquois_lion_clean_3,R.drawable.turquois_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*35*/myDeck.add(new Card(R.drawable.turquois_seal_dots_1,R.drawable.turquois_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*36*/myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*37*/myDeck.add(new Card(R.drawable.turquois_seal_dots_3,R.drawable.turquois_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*38*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_1,R.drawable.turquois_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*39*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_2,R.drawable.turquois_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+				
+		//SEAL RED:
+		/*40*/myDeck.add(new Card(R.drawable.pink_seal_clean_1,R.drawable.pink_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*41*/myDeck.add(new Card(R.drawable.pink_seal_clean_2,R.drawable.pink_seal_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*42*/myDeck.add(new Card(R.drawable.pink_seal_clean_3,R.drawable.pink_seal_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		/*43*/myDeck.add(new Card(R.drawable.pink_seal_stripes_1,R.drawable.pink_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*44*/myDeck.add(new Card(R.drawable.pink_seal_stripes_2,R.drawable.pink_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*45*/myDeck.add(new Card(R.drawable.pink_seal_stripes_3,R.drawable.pink_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		/*46*/myDeck.add(new Card(R.drawable.pink_seal_dots_1,R.drawable.pink_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*47*/myDeck.add(new Card(R.drawable.pink_seal_dots_2,R.drawable.pink_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*48*/myDeck.add(new Card(R.drawable.pink_seal_dots_3,R.drawable.pink_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		//SEAL GREEN:
+		/*49*/myDeck.add(new Card(R.drawable.green_seal_clean_1,R.drawable.green_seal_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*50*/myDeck.add(new Card(R.drawable.green_seal_clean_2,R.drawable.green_seal_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*51*/myDeck.add(new Card(R.drawable.green_seal_clean_3,R.drawable.green_seal_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*52*/myDeck.add(new Card(R.drawable.green_seal_stripes_1,R.drawable.green_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*53*/myDeck.add(new Card(R.drawable.green_seal_stripes_2,R.drawable.green_seal_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*54*/myDeck.add(new Card(R.drawable.green_seal_stripes_3,R.drawable.green_seal_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*55*/myDeck.add(new Card(R.drawable.green_seal_dots_1,R.drawable.green_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*56*/myDeck.add(new Card(R.drawable.green_seal_dots_2,R.drawable.green_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*57*/myDeck.add(new Card(R.drawable.green_seal_dots_3,R.drawable.green_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.GREEN,Card.CardAmount.THREE));		
+				
+		//APE RED:
+		/*58*/myDeck.add(new Card(R.drawable.pink_ape_dots_1,R.drawable.pink_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*59*/myDeck.add(new Card(R.drawable.pink_ape_dots_2,R.drawable.pink_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*60*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		/*61*/myDeck.add(new Card(R.drawable.pink_ape_clean_1,R.drawable.pink_ape_dots_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*62*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		/*63*/myDeck.add(new Card(R.drawable.pink_ape_stripes_2,R.drawable.pink_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
+		/*64*/myDeck.add(new Card(R.drawable.pink_ape_stripes_3,R.drawable.pink_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
+				
+		//APE TURQUOIS:
+		/*65*/myDeck.add(new Card(R.drawable.turquois_ape_dots_1,R.drawable.turquois_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*66*/myDeck.add(new Card(R.drawable.turquois_ape_dots_2,R.drawable.turquois_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*67*/myDeck.add(new Card(R.drawable.turquois_ape_dots_3,R.drawable.turquois_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*68*/myDeck.add(new Card(R.drawable.turquois_ape_clean_1,R.drawable.turquois_ape_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*69*/myDeck.add(new Card(R.drawable.turquois_ape_clean_2,R.drawable.turquois_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*70*/myDeck.add(new Card(R.drawable.turquois_ape_clean_3,R.drawable.turquois_ape_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
+				
+		/*71*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_1,R.drawable.turquois_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
+		/*72*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_2,R.drawable.turquois_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*73*/myDeck.add(new Card(R.drawable.turquois_ape_stripes_3,R.drawable.turquois_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));	
+				
+		//APE GREEN:
+		/*74*/myDeck.add(new Card(R.drawable.green_ape_dots_1,R.drawable.green_ape_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*75*/myDeck.add(new Card(R.drawable.green_ape_dots_2,R.drawable.green_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*76*/myDeck.add(new Card(R.drawable.green_ape_dots_3,R.drawable.green_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*77*/myDeck.add(new Card(R.drawable.green_ape_clean_1,R.drawable.green_ape_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*78*/myDeck.add(new Card(R.drawable.green_ape_clean_2,R.drawable.green_ape_clean_2_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*79*/myDeck.add(new Card(R.drawable.green_ape_clean_3,R.drawable.green_ape_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));
+				
+		/*80*/myDeck.add(new Card(R.drawable.green_ape_stripes_1,R.drawable.green_ape_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.ONE));
+		/*81*/myDeck.add(new Card(R.drawable.green_ape_stripes_2,R.drawable.green_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.TWO));
+		/*82*/myDeck.add(new Card(R.drawable.green_ape_stripes_3,R.drawable.green_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.GREEN,Card.CardAmount.THREE));	
+	
 	}
 }

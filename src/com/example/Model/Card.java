@@ -11,7 +11,7 @@ public class Card {
 	public static enum CardAnimal{LION,APE,SEAL}; //Anvï¿½nds fï¿½r att beskriva varje korts typ av djur
 	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Anvï¿½nds fï¿½r att beskriva varje korts bakgrund
 	public static enum CardAmount{ONE,TWO,THREE}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
-	public static enum CardColor{RED,BLUE,GREEN}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
+	public static enum CardColor{PINK,TURQUOIS,GREEN}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
 	
 	private int cardPressed; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett nertryckt kort
 	private int cardNormal; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett normallt kort

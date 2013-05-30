@@ -29,14 +29,14 @@ public class SoundPlayer /*extends Activity*/ {
 	private SoundPool soundPool;
 	private HashMap<Integer, Integer> soundsMap;
 	private int SOUND1 = 1;
-	private int SOUND2 = 2; 
+	private int SOUND2 = 2;
 	private int SOUND3 = 3;
 	private Activity activity;
 	    
 	//Här måste vi ta emot en referens till den kontext som laddar ljuden, alltså aktiviteten
 	public SoundPlayer(Activity _activity){
 		this.activity = _activity;
-		mp = MediaPlayer.create(activity, R.raw.backgroundmusic);
+		mp = MediaPlayer.create(activity, R.raw.bakgrundmusik);
 		mp.setLooping(true); // Set looping
 		mp.setVolume(50,50);
 		mp.start();

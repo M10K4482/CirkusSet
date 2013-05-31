@@ -105,8 +105,8 @@ public class Deck {
 		/*59*/myDeck.add(new Card(R.drawable.pink_ape_dots_2,R.drawable.pink_ape_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
 		/*60*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
-		/*61*/myDeck.add(new Card(R.drawable.pink_ape_clean_1,R.drawable.pink_ape_dots_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
-		/*62*/myDeck.add(new Card(R.drawable.pink_ape_dots_3,R.drawable.pink_ape_dots_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
+		/*61*/myDeck.add(new Card(R.drawable.pink_ape_clean_1,R.drawable.pink_ape_clean_1_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.ONE));
+		/*62*/myDeck.add(new Card(R.drawable.pink_ape_clean_3,R.drawable.pink_ape_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));
 		
 		/*63*/myDeck.add(new Card(R.drawable.pink_ape_stripes_2,R.drawable.pink_ape_stripes_2_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.TWO));
 		/*64*/myDeck.add(new Card(R.drawable.pink_ape_stripes_3,R.drawable.pink_ape_stripes_3_click,Card.CardFill.STRIPES,Card.CardAnimal.APE,Card.CardColor.PINK,Card.CardAmount.THREE));

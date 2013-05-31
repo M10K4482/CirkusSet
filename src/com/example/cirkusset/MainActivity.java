@@ -48,6 +48,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 	private ImageButton shuffleButton;
 	private SoundPlayer sounds;
 	private PointCounter points;
+	private boolean changePlayer = false;
 	
 	TextView text; // visa nedräkning
 
@@ -107,7 +108,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 									}
 								}			
 								if(setCards == true){
-									points.setPlayerScore(10, true);
+									points.setPlayerScore(10);
 									sounds.getSound(1);
 									onPad.getThreeCards();	
 									Log.i("points", ""+points.getPlayerOneScore());
@@ -126,6 +127,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 	private void restart() {
 		mVideoView.setVisibility(VideoView.INVISIBLE);
 		knapp.setAlpha(0f);
+		knapp.setClickable(false);
 		MyCount counter = new MyCount(20000, 1000);
 		counter.start();
 	}
@@ -156,8 +158,6 @@ public class MainActivity extends Activity implements OnCompletionListener{
 		@Override
 		public void onFinish() {
 			text.setText("Stopp!");
-			//knapp.setAlpha(1.0f);
-			
 			runvideo();
 		}
 
@@ -171,10 +171,12 @@ public class MainActivity extends Activity implements OnCompletionListener{
 	public void onCompletion(MediaPlayer mp) {
 		knapp.setAlpha(1.0f);
 		knapp.startAnimation(lollipopbounce);
+		knapp.setClickable(true);
 		Log.i("plap", "I onCompletion");	
 	}
 	//Nar man trycker pa spela-knappen onClick du vet
 	public void restartClick(View v) {
+		changePlayer = !changePlayer;
 		restart();
 	}
 	

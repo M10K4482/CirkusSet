@@ -5,22 +5,28 @@ public class PointCounter {
 	int playerOneScore;
 	int playerTwoScore;
 	int number;
-	boolean kindOfPoints;
+	boolean whichPlayer;
 	
 	public PointCounter(){
 		playerOneScore = 0;
 		playerTwoScore = 0;
 	}
 
-	public void setPlayerScore(int number, boolean kindOfPoints){
+	public void setPlayerScore(int number){
 		this.number = number;
-		this.kindOfPoints = kindOfPoints;
+		this.whichPlayer = whichPlayer;
 		
-		if(kindOfPoints == true){
+		if(whichPlayer == true){
 			playerOneScore += number;
-		}else if(kindOfPoints == false){
-			playerOneScore -= number;
+		}else if(whichPlayer == false){
+			playerOneScore += number;
 		}
+		
+	}
+	
+	public void setWhichPlayer(boolean whichPlayer){
+		
+		this.whichPlayer = whichPlayer;
 		
 	}
 

@@ -48,7 +48,9 @@ public class MainActivity extends Activity implements OnCompletionListener{
 	private ImageButton shuffleButton;
 	private SoundPlayer sounds;
 	private PointCounter points;
-	private boolean changePlayer = false;
+	private boolean changePlayer = true;
+	private TextView spelare1;
+	private TextView spelare2;
 	
 	TextView text; // visa nedräkning
 
@@ -61,6 +63,8 @@ public class MainActivity extends Activity implements OnCompletionListener{
 			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
+		
+		
 		
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		knapp = (ImageButton) findViewById(R.id.imageButton2);
@@ -108,9 +112,13 @@ public class MainActivity extends Activity implements OnCompletionListener{
 									}
 								}			
 								if(setCards == true){
-									points.setPlayerScore(10);
+									points.setPlayerScore(1);
 									sounds.getSound(1);
-									onPad.getThreeCards();	
+									onPad.getThreeCards();
+									spelare1 = (TextView) findViewById(R.id.spelare1);
+									spelare1.setText("Lag 1: "+points.getPlayerOneScore());
+									spelare2 = (TextView) findViewById(R.id.spelare1);
+									spelare2.setText("Lag 1: "+points.getPlayerOneScore());
 									Log.i("points", ""+points.getPlayerOneScore());
 								}else{
 									sounds.getSound(2);
@@ -128,6 +136,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 		mVideoView.setVisibility(VideoView.INVISIBLE);
 		knapp.setAlpha(0f);
 		knapp.setClickable(false);
+		changePlayer = !changePlayer;
 		MyCount counter = new MyCount(20000, 1000);
 		counter.start();
 	}
@@ -136,7 +145,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 		mVideoView.setVisibility(VideoView.VISIBLE);
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		mVideoView.setVideoURI(Uri.parse("android.resource://"
-				+ getPackageName() + "/" + R.raw.denanimation));
+				+ getPackageName() + "/" + R.raw.nestelag));
 		mVideoView.setMediaController(new MediaController(this));
 		mVideoView.requestFocus();
 		mVideoView.start();

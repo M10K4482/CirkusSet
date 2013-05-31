@@ -1,85 +1,111 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/relative_test"
-    android:layout_width="1280dp"
-    android:layout_height="800dp"
-    android:background="@drawable/bg_alt" >
+android:id="@+id/relative_test"
+android:layout_width="1280dp"
+android:layout_height="800dp"
+android:background="@drawable/bg_alt_1" >
 
-    <GridView
-        android:id="@+id/gridviewTest"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/imageButton1"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_toLeftOf="@+id/button2"
-        android:layout_toRightOf="@+id/button1"
-        android:columnWidth="250dp"
-        android:gravity="center_vertical"
-        android:horizontalSpacing="1dp"
-        android:listSelector="#00000000"
-        android:numColumns="3"
-        android:scaleType="fitXY"
-        android:scrollbars="vertical|none"
-        android:stretchMode="none"
-        android:verticalSpacing="1dp" >
-    </GridView>
+<GridView
+android:id="@+id/gridviewTest"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_above="@+id/imageButton1"
+android:layout_centerVertical="true"
+android:layout_marginLeft="100dp"
+android:layout_marginTop="20dp"
+android:layout_toLeftOf="@+id/button2"
+android:layout_toRightOf="@+id/button1"
+android:columnWidth="250dp"
+android:gravity="center_vertical"
+android:horizontalSpacing="1dp"
+android:listSelector="#00000000"
+android:numColumns="3"
+android:scaleType="fitXY"
+android:scrollbars="vertical|none"
+android:stretchMode="none"
+android:verticalSpacing="1dp" >
+</GridView>
 
-    <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="test"
-        android:src="@drawable/ic_launcher" />
+<Button
+android:id="@+id/button2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentRight="true"
+android:layout_centerVertical="true"
+android:text="Lag 2" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:text="Lag 2" />
+<Button
+android:id="@+id/button1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentLeft="true"
+android:layout_centerVertical="true"
+android:text="Lag 1" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="Lag 1" />
+<VideoView
+android:id="@+id/surface_view"
+android:layout_width="1280dp"
+android:layout_height="fill_parent" />
 
-    <VideoView
-        android:id="@+id/surface_view"
-        android:layout_width="1280dp"
-        android:layout_height="fill_parent" />
+<TextView
+android:id="@+id/tv"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentRight="true"
+android:layout_alignParentTop="true"
+android:layout_marginRight="19dp"
+android:text="TextView"
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:textColor="#B22222"
+android:textSize="50dp"
+android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="19dp"
-        android:text="TextView"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B22222"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+<TextView
+android:id="@+id/spelare1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentRight="true"
+android:layout_below="@+id/tv"
+android:layout_marginRight="19dp"
+android:text="Lag 1: "
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:textColor="#B22222"
+android:textSize="50dp"
+android:textStyle="bold" />
 
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="300dp"
-        android:layout_height="1000dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="-240dp"
-        android:layout_marginRight="50dp"
-        android:alpha="0"
-        android:background="@null"
-        android:maxHeight="@dimen/activity_vertical_margin"
-        android:onClick="restartClick"
-        android:src="@drawable/spela" />
+<TextView
+android:id="@+id/spelare2"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentRight="true"
+android:layout_below="@+id/spelare1"
+android:layout_marginRight="19dp"
+android:text="Lag 2: "
+android:textAppearance="?android:attr/textAppearanceLarge"
+android:textColor="#B22222"
+android:textSize="50dp"
+android:textStyle="bold" />
+
+<ImageButton
+android:id="@+id/imageButton1"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_alignParentRight="true"
+android:layout_alignParentBottom="true"
+android:onClick="test"
+android:src="@drawable/ic_launcher" />
+
+<ImageButton
+android:id="@+id/imageButton2"
+android:layout_width="300dp"
+android:layout_height="1000dp"
+android:layout_alignParentBottom="true"
+android:layout_alignParentRight="true"
+android:layout_marginBottom="-240dp"
+android:layout_marginRight="50dp"
+android:alpha="0"
+android:background="@null"
+android:maxHeight="@dimen/activity_vertical_margin"
+android:onClick="restartClick"
+android:src="@drawable/spela" />
 
 </RelativeLayout>

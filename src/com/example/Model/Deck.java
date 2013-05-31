@@ -68,7 +68,7 @@ public class Deck {
 		/*34*/myDeck.add(new Card(R.drawable.turquois_lion_clean_3,R.drawable.turquois_lion_clean_3_click,Card.CardFill.CLEAN,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
 		/*35*/myDeck.add(new Card(R.drawable.turquois_seal_dots_1,R.drawable.turquois_seal_dots_1_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));
-		/*36*/myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
+		/*36*///myDeck.add(new Card(R.drawable.turquois_seal_dots_2,R.drawable.turquois_seal_dots_2_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.TWO));
 		/*37*/myDeck.add(new Card(R.drawable.turquois_seal_dots_3,R.drawable.turquois_seal_dots_3_click,Card.CardFill.DOTS,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.THREE));
 		
 		/*38*/myDeck.add(new Card(R.drawable.turquois_seal_stripes_1,R.drawable.turquois_seal_stripes_1_click,Card.CardFill.STRIPES,Card.CardAnimal.SEAL,Card.CardColor.TURQUOIS,Card.CardAmount.ONE));

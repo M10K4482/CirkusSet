@@ -62,9 +62,9 @@ public class ImageAdapter extends BaseAdapter {
 		ImageView imageView; //Vï¿½r imageview som anvï¿½nds fï¿½r att visa bilderna
         if (convertView == null) {  //if it's not recycled, initialize some attributes
             imageView = new ImageView(context); //Koppla vï¿½r context (pï¿½minnelse-grej) med imageviewen
-            imageView.setLayoutParams(new GridView.LayoutParams(230, 230)); //Hï¿½r skapar vi det nya elementet med GridView
+            imageView.setLayoutParams(new GridView.LayoutParams(250, 173)); //Hï¿½r skapar vi det nya elementet med GridView
             imageView.setScaleType(ImageView.ScaleType.FIT_START);  //Centrera de bilder vi lï¿½gger in
-            imageView.setPadding(2, 2, 2, 2); //Fluff
+            imageView.setPadding(5, 5, 5, 5); //Fluff
         } else {
             imageView = (ImageView) convertView; // Om inget har ï¿½ndrats ï¿½teranvï¿½nder vi gammal bild
         }

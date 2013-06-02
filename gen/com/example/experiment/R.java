@@ -194,17 +194,19 @@ public final class R {
         public static final int turquois_seal_stripes_3_click=0x7f0200a7;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000a;
-        public static final int button1=0x7f0a0004;
-        public static final int button2=0x7f0a0003;
-        public static final int gridviewTest=0x7f0a0001;
-        public static final int imageButton1=0x7f0a0002;
-        public static final int imageButton2=0x7f0a0009;
+        public static final int action_settings=0x7f0a000c;
+        public static final int gridviewTest=0x7f0a000b;
+        public static final int imageButton1=0x7f0a0009;
+        public static final int imageButton2=0x7f0a0007;
+        public static final int korten=0x7f0a000a;
+        public static final int relative2=0x7f0a0008;
         public static final int relative_test=0x7f0a0000;
-        public static final int spelare1=0x7f0a0007;
-        public static final int spelare2=0x7f0a0008;
-        public static final int surface_view=0x7f0a0005;
-        public static final int tv=0x7f0a0006;
+        public static final int restart=0x7f0a0006;
+        public static final int spelare1=0x7f0a0004;
+        public static final int spelare2=0x7f0a0005;
+        public static final int surface_view=0x7f0a0003;
+        public static final int tv=0x7f0a0002;
+        public static final int video=0x7f0a0001;
     }
     public static final class layout {
         public static final int activity_grid_test=0x7f030000;

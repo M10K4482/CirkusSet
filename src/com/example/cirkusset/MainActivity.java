@@ -1,5 +1,5 @@
 package com.example.cirkusset;
-
+//Testar github 6/3
 import com.example.Model.Card;
 
 import com.example.Model.CardsOnPad;
@@ -172,7 +172,7 @@ public class MainActivity extends Activity implements OnCompletionListener{
 
 		@Override
 		public void onTick(long millisUntilFinished) {
-			text = (TextView) findViewById(R.id.tv);
+			text = (TextView) findViewById(R.id.clock);
 			text.setText("Tid kvar: " + millisUntilFinished / 1000);	
 		}
 	}

@@ -1,5 +1,7 @@
 package com.example.cirkusset;
 //Testar github 6/3
+import com.example.cirkusset.MainActivity;
+
 import com.example.Model.Card;
 
 import com.example.Model.CardsOnPad;
@@ -43,7 +45,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private ImageAdapter im; //Skapa en referens (im) så att man kan komma åt ImageAdapter klassen
 	private CardsOnPad onPad; //Referens till de kort som skall vara på paddan 
 	private RuleLogic logic;
-	private int counter;
+	private int cardCounter;
 	private static int PRESSED_LIMIT = 3;
 	private boolean setCards;
 	private Deck aDeck;
@@ -52,20 +54,20 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private PointCounter points;
 	private boolean changePlayer = true;
 	private TextView spelare1;
-	private TextView spelare2;
-	
+	private TextView spelare2;	
 	private TextView text; //Visa nedräkning
-
 	private VideoView mVideoView;
 	private ImageButton knapp;
 	private Animation lollipopbounce;
+	private int gameCounter;
+	private int time;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 			
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
-		
+		gameCounter = 0;
 		points = new PointCounter();
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		knapp = (ImageButton) findViewById(R.id.imageButton2);
@@ -89,14 +91,13 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
 		logic = new RuleLogic();
 		gr.setAdapter(im); //Skapa adapter skicka in våra kort 
-		// Ni har helt enkelt missat att initiera "getSounds" objektet - eftersom ni använder mediaplayer i Sounds klassen så måste ni även skicka med en referens till aktiviteten (alltså den kontext där ljuden skall spelas)
 		sounds = new SoundPlayer(this);
 		points = new PointCounter();
 				
 		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
 					
 		public void onItemClick(AdapterView<?> parent, View v, int position, long id) { //Denna kï¿½r igï¿½ng nï¿½r man klickat nï¿½got och anvï¿½nder sig av en adaptor
-			counter = 0;
+			cardCounter = 0;
 			Card ca = onPad.getCard(position); //Hï¿½mta kortet som klickats via dess position pï¿½ brï¿½det
 			ca.pressCard(); //Tryck in kortet och byt dess bild
 			sounds.getSound(3);
@@ -104,8 +105,8 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 					
 			for(int i = 0; i < onPad.getCards().size(); i++){	
 				if(onPad.getCard(i).isPressed()==true){		
-					counter += 1;
-					if(counter == PRESSED_LIMIT){
+					cardCounter += 1;
+					if(cardCounter == PRESSED_LIMIT){
 						new CountDownTimer(1000, 1000){
 							public void onTick(long millisUntilFinished){
 								
@@ -139,13 +140,14 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	}
 	
 	private void restart() {
+		time = 60000;
 		mVideoView.setVisibility(VideoView.INVISIBLE);
 		knapp.setAlpha(0f);
 		knapp.setClickable(false);
 		changePlayer = !changePlayer;
 		points.setWhichPlayer(changePlayer);
-		MyCount counter = new MyCount(60000, 1000);
-		counter.start();//
+		MyCount counter = new MyCount(time, 1000);
+		counter.start();
 	}
 	//Videospelaren for animationen
 	private void runvideo() {
@@ -174,12 +176,22 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		@Override
 		public void onFinish() {
 			text.setText("Stopp!");
+			if(gameCounter == 2){
+				Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+				startActivity(intent);
+				finish();
+			}else{
+				gameCounter++;
+			}
 			runvideo();
 		}
 
 		@Override
 		public void onTick(long millisUntilFinished) {
 			text = (TextView) findViewById(R.id.clock);
+			if(shuffleButton.isPressed()){
+				millisUntilFinished -= 5; 
+			}
 			text.setText("Tid kvar: " + millisUntilFinished / 1000);	
 		}
 	}

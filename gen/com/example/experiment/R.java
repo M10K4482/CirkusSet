@@ -9,7 +9,9 @@ package com.example.experiment;
 
 public final class R {
     public static final class anim {
-        public static final int lollipopbounce=0x7f040000;
+        public static final int bottomin=0x7f040000;
+        public static final int lollipopbounce=0x7f040001;
+        public static final int topout=0x7f040002;
     }
     public static final class attr {
     }

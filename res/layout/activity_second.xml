@@ -6,11 +6,12 @@
 
     <ImageButton
         android:id="@+id/imagebutton1"
+        android:background="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="175dp"
-        android:src="@drawable/startsidaknapp" />
+        android:src="@drawable/startsidaknapp"/> 
 
 </RelativeLayout>

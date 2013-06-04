@@ -138,67 +138,72 @@ public final class R {
         public static final int pink_seal_stripes_3=0x7f02006f;
         public static final int pink_seal_stripes_3_click=0x7f020070;
         public static final int spela=0x7f020071;
-        public static final int turquois_ape_clean_1=0x7f020072;
-        public static final int turquois_ape_clean_1_click=0x7f020073;
-        public static final int turquois_ape_clean_2=0x7f020074;
-        public static final int turquois_ape_clean_2_click=0x7f020075;
-        public static final int turquois_ape_clean_3=0x7f020076;
-        public static final int turquois_ape_clean_3_click=0x7f020077;
-        public static final int turquois_ape_dots_1=0x7f020078;
-        public static final int turquois_ape_dots_1_click=0x7f020079;
-        public static final int turquois_ape_dots_2=0x7f02007a;
-        public static final int turquois_ape_dots_2_click=0x7f02007b;
-        public static final int turquois_ape_dots_3=0x7f02007c;
-        public static final int turquois_ape_dots_3_click=0x7f02007d;
-        public static final int turquois_ape_stripes_1=0x7f02007e;
-        public static final int turquois_ape_stripes_1_click=0x7f02007f;
-        public static final int turquois_ape_stripes_2=0x7f020080;
-        public static final int turquois_ape_stripes_2_click=0x7f020081;
-        public static final int turquois_ape_stripes_3=0x7f020082;
-        public static final int turquois_ape_stripes_3_click=0x7f020083;
-        public static final int turquois_lion_clean_1=0x7f020084;
-        public static final int turquois_lion_clean_1_click=0x7f020085;
-        public static final int turquois_lion_clean_2=0x7f020086;
-        public static final int turquois_lion_clean_2_click=0x7f020087;
-        public static final int turquois_lion_clean_3=0x7f020088;
-        public static final int turquois_lion_clean_3_click=0x7f020089;
-        public static final int turquois_lion_dots_1=0x7f02008a;
-        public static final int turquois_lion_dots_1_click=0x7f02008b;
-        public static final int turquois_lion_dots_2=0x7f02008c;
-        public static final int turquois_lion_dots_2_click=0x7f02008d;
-        public static final int turquois_lion_dots_3=0x7f02008e;
-        public static final int turquois_lion_dots_3_click=0x7f02008f;
-        public static final int turquois_lion_stripes_1=0x7f020090;
-        public static final int turquois_lion_stripes_1_click=0x7f020091;
-        public static final int turquois_lion_stripes_2=0x7f020092;
-        public static final int turquois_lion_stripes_2_click=0x7f020093;
-        public static final int turquois_lion_stripes_3=0x7f020094;
-        public static final int turquois_lion_stripes_3_click=0x7f020095;
-        public static final int turquois_seal_clean_1=0x7f020096;
-        public static final int turquois_seal_clean_1_click=0x7f020097;
-        public static final int turquois_seal_clean_2=0x7f020098;
-        public static final int turquois_seal_clean_2_click=0x7f020099;
-        public static final int turquois_seal_clean_3=0x7f02009a;
-        public static final int turquois_seal_clean_3_click=0x7f02009b;
-        public static final int turquois_seal_dots_1=0x7f02009c;
-        public static final int turquois_seal_dots_1_click=0x7f02009d;
-        public static final int turquois_seal_dots_2=0x7f02009e;
-        public static final int turquois_seal_dots_2_click=0x7f02009f;
-        public static final int turquois_seal_dots_3=0x7f0200a0;
-        public static final int turquois_seal_dots_3_click=0x7f0200a1;
-        public static final int turquois_seal_stripes_1=0x7f0200a2;
-        public static final int turquois_seal_stripes_1_click=0x7f0200a3;
-        public static final int turquois_seal_stripes_2=0x7f0200a4;
-        public static final int turquois_seal_stripes_2_click=0x7f0200a5;
-        public static final int turquois_seal_stripes_3=0x7f0200a6;
-        public static final int turquois_seal_stripes_3_click=0x7f0200a7;
+        public static final int startsida2=0x7f020072;
+        public static final int startsida3=0x7f020073;
+        public static final int startsida4=0x7f020074;
+        public static final int startsidaknapp=0x7f020075;
+        public static final int turquois_ape_clean_1=0x7f020076;
+        public static final int turquois_ape_clean_1_click=0x7f020077;
+        public static final int turquois_ape_clean_2=0x7f020078;
+        public static final int turquois_ape_clean_2_click=0x7f020079;
+        public static final int turquois_ape_clean_3=0x7f02007a;
+        public static final int turquois_ape_clean_3_click=0x7f02007b;
+        public static final int turquois_ape_dots_1=0x7f02007c;
+        public static final int turquois_ape_dots_1_click=0x7f02007d;
+        public static final int turquois_ape_dots_2=0x7f02007e;
+        public static final int turquois_ape_dots_2_click=0x7f02007f;
+        public static final int turquois_ape_dots_3=0x7f020080;
+        public static final int turquois_ape_dots_3_click=0x7f020081;
+        public static final int turquois_ape_stripes_1=0x7f020082;
+        public static final int turquois_ape_stripes_1_click=0x7f020083;
+        public static final int turquois_ape_stripes_2=0x7f020084;
+        public static final int turquois_ape_stripes_2_click=0x7f020085;
+        public static final int turquois_ape_stripes_3=0x7f020086;
+        public static final int turquois_ape_stripes_3_click=0x7f020087;
+        public static final int turquois_lion_clean_1=0x7f020088;
+        public static final int turquois_lion_clean_1_click=0x7f020089;
+        public static final int turquois_lion_clean_2=0x7f02008a;
+        public static final int turquois_lion_clean_2_click=0x7f02008b;
+        public static final int turquois_lion_clean_3=0x7f02008c;
+        public static final int turquois_lion_clean_3_click=0x7f02008d;
+        public static final int turquois_lion_dots_1=0x7f02008e;
+        public static final int turquois_lion_dots_1_click=0x7f02008f;
+        public static final int turquois_lion_dots_2=0x7f020090;
+        public static final int turquois_lion_dots_2_click=0x7f020091;
+        public static final int turquois_lion_dots_3=0x7f020092;
+        public static final int turquois_lion_dots_3_click=0x7f020093;
+        public static final int turquois_lion_stripes_1=0x7f020094;
+        public static final int turquois_lion_stripes_1_click=0x7f020095;
+        public static final int turquois_lion_stripes_2=0x7f020096;
+        public static final int turquois_lion_stripes_2_click=0x7f020097;
+        public static final int turquois_lion_stripes_3=0x7f020098;
+        public static final int turquois_lion_stripes_3_click=0x7f020099;
+        public static final int turquois_seal_clean_1=0x7f02009a;
+        public static final int turquois_seal_clean_1_click=0x7f02009b;
+        public static final int turquois_seal_clean_2=0x7f02009c;
+        public static final int turquois_seal_clean_2_click=0x7f02009d;
+        public static final int turquois_seal_clean_3=0x7f02009e;
+        public static final int turquois_seal_clean_3_click=0x7f02009f;
+        public static final int turquois_seal_dots_1=0x7f0200a0;
+        public static final int turquois_seal_dots_1_click=0x7f0200a1;
+        public static final int turquois_seal_dots_2=0x7f0200a2;
+        public static final int turquois_seal_dots_2_click=0x7f0200a3;
+        public static final int turquois_seal_dots_3=0x7f0200a4;
+        public static final int turquois_seal_dots_3_click=0x7f0200a5;
+        public static final int turquois_seal_stripes_1=0x7f0200a6;
+        public static final int turquois_seal_stripes_1_click=0x7f0200a7;
+        public static final int turquois_seal_stripes_2=0x7f0200a8;
+        public static final int turquois_seal_stripes_2_click=0x7f0200a9;
+        public static final int turquois_seal_stripes_3=0x7f0200aa;
+        public static final int turquois_seal_stripes_3_click=0x7f0200ab;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a000b;
+        public static final int action_settings=0x7f0a000c;
         public static final int clock=0x7f0a0005;
         public static final int gridviewTest=0x7f0a0003;
         public static final int imageButton1=0x7f0a000a;
         public static final int imageButton2=0x7f0a0008;
+        public static final int imagebutton1=0x7f0a000b;
         public static final int korten=0x7f0a0001;
         public static final int relative_test=0x7f0a0000;
         public static final int shuffle=0x7f0a0009;
@@ -209,9 +214,11 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_grid_test=0x7f030000;
+        public static final int activity_second=0x7f030001;
     }
     public static final class menu {
         public static final int main=0x7f090000;
+        public static final int second=0x7f090001;
     }
     public static final class raw {
         public static final int backgroundmusic=0x7f050000;
@@ -226,6 +233,7 @@ public final class R {
         public static final int action_settings=0x7f070001;
         public static final int app_name=0x7f070000;
         public static final int hello_world=0x7f070002;
+        public static final int title_activity_second=0x7f070003;
     }
     public static final class style {
         /** 

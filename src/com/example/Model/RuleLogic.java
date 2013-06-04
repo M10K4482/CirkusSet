@@ -59,48 +59,20 @@ public class RuleLogic {
 	
 	public boolean getRulesForAll(ArrayList<Card> AllCards){
 		
-		/*Här jämförs de tre markerade korten (0,1,2) med varandra. 
-		För varje if-sats jämförs en specefik grejj såsom färg, fyllnad, djur etc. */
-		if(!((AllCards.get(0).getCardColor() == AllCards.get(1).getCardColor()) && 
-			(AllCards.get(1).getCardColor() == AllCards.get(2).getCardColor()) || 
-			(AllCards.get(0).getCardColor() != AllCards.get(1).getCardColor()) && 
-			(AllCards.get(1).getCardColor() != AllCards.get(2).getCardColor()) && 
-			(AllCards.get(0).getCardColor() != AllCards.get(2).getCardColor()))){
-			Log.i("Rättar set", "Fel färg!");
-			return false;
+		for(int i = 0; i < AllCards.size(); i++){
+			for(int o = 0; o < AllCards.size(); i++){
+				if(AllCards.get(i).getCardColor()==AllCards.get(o).getCardColor()){
+					for(int p = o; p < AllCards.size(); i++){
+						if(AllCards.get(o).getCardColor() == AllCards.get(p).getCardColor()){
+							Log.i("Alla kort", "Tre lika färger finns");
+						}
+					}
+				}
+			}
 		}
-
-		if(!((AllCards.get(0).getCardAnimal() == AllCards.get(1).getCardAnimal()) && 
-			(AllCards.get(1).getCardAnimal() == AllCards.get(2).getCardAnimal()) || 
-			(AllCards.get(0).getCardAnimal() != AllCards.get(1).getCardAnimal()) && 
-			(AllCards.get(1).getCardAnimal() != AllCards.get(2).getCardAnimal()) && 
-			(AllCards.get(0).getCardAnimal() != AllCards.get(2).getCardAnimal()))){
-			Log.i("Rättar set", "Fel djur!");
-			return false;
-		}
-			
-		if(!((AllCards.get(0).getCardFill() == AllCards.get(1).getCardFill()) && 
-			(AllCards.get(1).getCardFill() == AllCards.get(2).getCardFill()) || 
-			(AllCards.get(0).getCardFill() != AllCards.get(1).getCardFill()) && 
-			(AllCards.get(1).getCardFill() != AllCards.get(2).getCardFill()) && 
-			(AllCards.get(0).getCardFill() != AllCards.get(2).getCardFill()))){
-			Log.i("Rättar set", "Fel fyllnad!");
-			return false;
-		}
-			
-		if(!((AllCards.get(0).getCardAmount() == AllCards.get(1).getCardAmount()) && 
-			(AllCards.get(1).getCardAmount() == AllCards.get(2).getCardAmount()) || 
-			(AllCards.get(0).getCardAmount() != AllCards.get(1).getCardAmount()) && 
-			(AllCards.get(1).getCardAmount() != AllCards.get(2).getCardAmount()) && 
-			(AllCards.get(0).getCardAmount() != AllCards.get(2).getCardAmount()))){
-			Log.i("Rättar set", "Fel antal!");
-			return false;
-		}
-			
-		Log.i("Rättar set", "Setet är rätt!");
-		return true;
 		
-	}
+		return true;
 
+	}
 }
 

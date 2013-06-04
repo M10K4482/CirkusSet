@@ -19,7 +19,7 @@ public class PointCounter {
 		if(whichPlayer == true){
 			playerOneScore += number;
 		}else if(whichPlayer == false){
-			playerOneScore += number;
+			playerTwoScore += number;
 		}
 		
 	}

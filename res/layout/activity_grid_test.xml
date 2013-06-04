@@ -33,45 +33,6 @@
         android:layout_width="1280dp"
         android:layout_height="800dp" />
 
-    <TextView
-        android:id="@+id/clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="19dp"
-        android:text="Clock"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B22222"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/spelare1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/clock"
-        android:layout_marginRight="25dp"
-        android:text="Lag 1: 0"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B22222"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/spelare2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/spelare1"
-        android:layout_marginRight="25dp"
-        android:text="Lag 2: 0"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#B22222"
-        android:textSize="50dp"
-        android:textStyle="bold" />
-
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="wrap_content"
@@ -88,20 +49,96 @@
         android:scaleType="fitXY"
         android:src="@drawable/spela" />
 
-    <LinearLayout
-        android:id="@+id/shuffle"
+    <RelativeLayout
+        android:id="@+id/right"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton2"
-        android:layout_alignRight="@+id/imageButton2"
-        android:orientation="vertical" >
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal" >
 
-        <ImageButton
-            android:id="@+id/imageButton1"
+        <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="test"
-            android:src="@drawable/ic_launcher" />
-    </LinearLayout>
+            android:layout_below="@+id/spelare1"
+            android:src="@drawable/lag1" />
+
+        <TextView
+            android:id="@+id/spelare1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/scoreboard"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#B22222"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        android:layout_toLeftOf="@+id/right"
+        android:background="@null"
+        android:onClick="test"
+        android:scaleType="fitXY"
+        android:src="@drawable/shuffle" />
+
+    <RelativeLayout
+        android:id="@+id/right2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/right" >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spelare2"
+            android:src="@drawable/lag2" />
+
+        <TextView
+            android:id="@+id/spelare2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/scoreboard"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#B22222"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/clock_stand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="540dp" >
+
+        <TextView
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tid"
+            android:gravity="center_horizontal"
+            android:text="16"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#C98D4D"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -48,19 +48,19 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private int cardCounter;
 	private static int PRESSED_LIMIT = 3;
 	private boolean setCards;
-	private Deck aDeck;
 	private ImageButton shuffleButton;
 	private SoundPlayer sounds;
 	private PointCounter points;
 	private boolean changePlayer = true;
-	private TextView spelare1;
-	private TextView spelare2;	
-	private TextView text; //Visa nedräkning
+	private TextView player1;
+	private TextView player2;	
+	private TextView text;
 	private VideoView mVideoView;
-	private ImageButton knapp;
+	private ImageButton lollipopButton;
 	private Animation lollipopbounce;
 	private int gameCounter;
-	private int time;
+	private MyCount counter;
+	private long newTime;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -70,21 +70,22 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		gameCounter = 0;
 		points = new PointCounter();
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
-		knapp = (ImageButton) findViewById(R.id.imageButton2);
+		lollipopButton = (ImageButton) findViewById(R.id.imageButton2);
 		mVideoView.setOnCompletionListener(this);
 		// animation
-		lollipopbounce = AnimationUtils.loadAnimation(this,
-				R.anim.lollipopbounce);
+		lollipopbounce = AnimationUtils.loadAnimation(this, R.anim.lollipopbounce);
+		counter = new MyCount(50000, 1000);
 		restart();
 		
 		this.shuffleButton = (ImageButton)this.findViewById(R.id.imageButton1);
-		  this.shuffleButton.setOnClickListener(new OnClickListener() {
+		this.shuffleButton.setOnClickListener(new OnClickListener() {
 		    @Override
-		  public void onClick(View v) {
-		      onPad.getNewHand();
-		      im.notifyDataSetChanged();
+		    public void onClick(View v) {
+		    	decreaseTime();
+		    	onPad.getNewHand();
+		    	im.notifyDataSetChanged();
 		    }
-		  });
+		});
 		
 		onPad = new CardsOnPad(); //Kör igång CardsOnPad klassen genom att anropa konstruktorn (CardsOnPad()) med referensen onPad
 		gr = (GridView) findViewById(R.id.gridviewTest); //Koppla gridview till layouten 
@@ -122,10 +123,10 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 									points.setPlayerScore(1);
 									sounds.getSound(1);
 									onPad.getThreeCards();
-									spelare1 = (TextView) findViewById(R.id.spelare1);
-									spelare1.setText("Lag 1: "+points.getPlayerOneScore());
-									spelare2 = (TextView) findViewById(R.id.spelare2);
-									spelare2.setText("Lag 2: "+points.getPlayerTwoScore());
+									player1 = (TextView) findViewById(R.id.spelare1);
+									player1.setText(""+points.getPlayerOneScore());
+									player2 = (TextView) findViewById(R.id.spelare2);
+									player2.setText(""+points.getPlayerTwoScore());
 								}else{
 									sounds.getSound(2);
 								}
@@ -140,13 +141,11 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	}
 	
 	private void restart() {
-		time = 60000;
 		mVideoView.setVisibility(VideoView.INVISIBLE);
-		knapp.setAlpha(0f);
-		knapp.setClickable(false);
+		lollipopButton.setAlpha(0f);
+		lollipopButton.setClickable(false);
 		changePlayer = !changePlayer;
 		points.setWhichPlayer(changePlayer);
-		MyCount counter = new MyCount(time, 1000);
 		counter.start();
 	}
 	//Videospelaren for animationen
@@ -161,6 +160,15 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 
 	}
 
+	public void decreaseTime(){
+		
+		newTime = newTime - 10000;
+		counter.cancel();
+		counter = new MyCount(newTime, 1000);
+		counter.start();
+		
+	}
+	
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -175,35 +183,41 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		//Nar tiden ar ute sa spelas filmen o knappen dyker upp
 		@Override
 		public void onFinish() {
-			text.setText("Stopp!");
-			if(gameCounter == 2){
-				Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+			text.setText("0");
+			if(gameCounter == 1){
+				Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
+				intent.putExtra("input1", Integer.toString(points.getPlayerOneScore()));
+				intent.putExtra("input2", Integer.toString(points.getPlayerTwoScore()));
 				startActivity(intent);
 				finish();
 			}else{
 				gameCounter++;
 			}
+			shuffleButton.setClickable(false);
+			shuffleButton.setAlpha(0f);
+			gr.setClickable(false);
 			runvideo();
 		}
 
 		@Override
 		public void onTick(long millisUntilFinished) {
-			text = (TextView) findViewById(R.id.clock);
-			if(shuffleButton.isPressed()){
-				millisUntilFinished -= 5; 
-			}
-			text.setText("Tid kvar: " + millisUntilFinished / 1000);	
+			text = (TextView) findViewById(R.id.clock);	
+			text.setText("" + millisUntilFinished/ 1000);
+			newTime = millisUntilFinished;
 		}
 	}
 
 	public void onCompletion(MediaPlayer mp) {
-		knapp.setAlpha(1.0f);
-		knapp.startAnimation(lollipopbounce);
-		knapp.setClickable(true);
-		Log.i("plap", "I onCompletion");	
+		lollipopButton.setAlpha(1.0f);
+		lollipopButton.startAnimation(lollipopbounce);
+		lollipopButton.setClickable(true);
 	}
+	
 	//Nar man trycker pa spela-knappen onClick du vet
 	public void restartClick(View v) {
+		shuffleButton.setClickable(true);
+		shuffleButton.setAlpha(1.0f);
+		gr.setClickable(true);
 		restart();
 	}
 	

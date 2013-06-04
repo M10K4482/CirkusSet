@@ -16,7 +16,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.cirkusset.MainActivity"
-            android:label="@string/app_name" 
+            android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +31,14 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.cirkusset.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.cirkusset.ThirdActivity"
+            android:label="@string/title_activity_third"
+            android:parentActivityName="com.example.cirkusset.SecondActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.cirkusset.SecondActivity" />
         </activity>
     </application>
 

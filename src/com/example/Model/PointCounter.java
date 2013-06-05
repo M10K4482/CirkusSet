@@ -1,5 +1,7 @@
 package com.example.Model;
 
+import android.util.Log;
+
 public class PointCounter {
 
 	int playerOneScore;
@@ -10,12 +12,12 @@ public class PointCounter {
 	public PointCounter(){
 		playerOneScore = 0;
 		playerTwoScore = 0;
+		whichPlayer = true;
 	}
 
 	public void setPlayerScore(int number){
 		this.number = number;
-		this.whichPlayer = whichPlayer;
-		
+		Log.i("PlayerKnapp2", ""+whichPlayer);
 		if(whichPlayer == true){
 			playerOneScore += number;
 		}else if(whichPlayer == false){

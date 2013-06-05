@@ -12,10 +12,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.Model.SoundPlayer;
 import com.example.experiment.R;
 
 public class ThirdActivity extends Activity implements OnClickListener{
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -26,12 +27,12 @@ public class ThirdActivity extends Activity implements OnClickListener{
 		String stringInput2 = getIntent().getExtras().getString("input2");
 		
 		TextView text1 = (TextView) findViewById(R.id.lag1);
-	    text1.setText("Lag tvås poäng: "+stringInput1);
+	    text1.setText("Lag tvås poäng: "+stringInput2);
 	    
 	    TextView text2 = (TextView) findViewById(R.id.lag2);
-	    text2.setText("Lag etts poäng: " +stringInput2);
+	    text2.setText("Lag etts poäng: " +stringInput1);
 		
-	    Button tillbaks = (Button) findViewById(R.id.tillbaks);
+	    ImageButton tillbaks = (ImageButton) findViewById(R.id.tillbaks);
 		tillbaks.setOnClickListener(this);
 	    
 	}

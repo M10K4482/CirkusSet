@@ -34,6 +34,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,6 +58,10 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private TextView text;
 	private VideoView mVideoView;
 	private ImageButton lollipopButton;
+	private ImageView teamOneUnmarked;
+	private ImageView teamTwoUnMarked;
+	private ImageView teamOneMarked;
+	private ImageView teamTwoMarked;
 	private Animation lollipopbounce;
 	private int gameCounter;
 	private MyCount counter;
@@ -72,9 +77,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
 		lollipopButton = (ImageButton) findViewById(R.id.imageButton2);
 		mVideoView.setOnCompletionListener(this);
-		// animation
 		lollipopbounce = AnimationUtils.loadAnimation(this, R.anim.lollipopbounce);
-		counter = new MyCount(50000, 1000);
 		restart();
 		
 		this.shuffleButton = (ImageButton)this.findViewById(R.id.imageButton1);
@@ -92,7 +95,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
 		logic = new RuleLogic();
 		gr.setAdapter(im); //Skapa adapter skicka in våra kort 
-		sounds = new SoundPlayer(this);
+		sounds = new SoundPlayer(this, true);
 		points = new PointCounter();
 				
 		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
@@ -105,10 +108,10 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 			im.notifyDataSetChanged();
 					
 			for(int i = 0; i < onPad.getCards().size(); i++){	
-				if(onPad.getCard(i).isPressed()==true){		
+				if(onPad.getCard(i).isPressed()==true){	
 					cardCounter += 1;
 					if(cardCounter == PRESSED_LIMIT){
-						new CountDownTimer(1000, 1000){
+						new CountDownTimer(200, 1000){
 							public void onTick(long millisUntilFinished){
 								
 							}
@@ -144,8 +147,24 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		mVideoView.setVisibility(VideoView.INVISIBLE);
 		lollipopButton.setAlpha(0f);
 		lollipopButton.setClickable(false);
-		changePlayer = !changePlayer;
+		teamOneMarked = (ImageView)this.findViewById(R.id.imageView3);
+		teamOneUnmarked = (ImageView)this.findViewById(R.id.imageView1);
+		teamTwoUnMarked = (ImageView)this.findViewById(R.id.imageView2);
+		teamTwoMarked = (ImageView)this.findViewById(R.id.imageView4);
+		Log.i("PlayerKnapp", ""+changePlayer);
+		if(changePlayer){			
+			teamOneUnmarked.setAlpha(1.0f);
+			teamOneMarked.setAlpha(0f);
+			teamTwoUnMarked.setAlpha(0f);
+			teamTwoMarked.setAlpha(1.0f);
+		}else{
+			teamTwoUnMarked.setAlpha(1.0f);
+			teamTwoMarked.setAlpha(0f);
+			teamOneUnmarked.setAlpha(0f);
+			teamOneMarked.setAlpha(1.0f);
+		}
 		points.setWhichPlayer(changePlayer);
+		counter = new MyCount(50000, 1000);
 		counter.start();
 	}
 	//Videospelaren for animationen
@@ -157,22 +176,25 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		mVideoView.setMediaController(new MediaController(this));
 		mVideoView.requestFocus();
 		mVideoView.start();
-
 	}
 
 	public void decreaseTime(){
-		
 		newTime = newTime - 10000;
 		counter.cancel();
 		counter = new MyCount(newTime, 1000);
-		counter.start();
-		
+		counter.start();	
+	}
+	
+	@Override
+	protected void onPause(){
+		super.onPause();
+		sounds.stopBackgroundMusic();
 	}
 	
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
+		sounds.startBackgroundMusic();
 	}
 
 	// RäknarN
@@ -184,17 +206,24 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		@Override
 		public void onFinish() {
 			text.setText("0");
-			if(gameCounter == 1){
+			if(gameCounter == 5) {
 				Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
 				intent.putExtra("input1", Integer.toString(points.getPlayerOneScore()));
 				intent.putExtra("input2", Integer.toString(points.getPlayerTwoScore()));
 				startActivity(intent);
+				overridePendingTransition(R.anim.bottomin, R.anim.topout);
 				finish();
 			}else{
 				gameCounter++;
 			}
 			shuffleButton.setClickable(false);
 			shuffleButton.setAlpha(0f);
+			for(int i = 0; i < onPad.getCards().size(); i++){	
+				if(onPad.getCard(i).isPressed()==true){
+				onPad.getCard(i).pressCard();	
+				}
+			}
+			im.notifyDataSetChanged();
 			gr.setClickable(false);
 			runvideo();
 		}
@@ -218,6 +247,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		shuffleButton.setClickable(true);
 		shuffleButton.setAlpha(1.0f);
 		gr.setClickable(true);
+		changePlayer = !changePlayer;
 		restart();
 	}
 	

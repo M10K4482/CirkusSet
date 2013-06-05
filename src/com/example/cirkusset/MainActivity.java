@@ -11,10 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.Model.SoundPlayer;
 import com.example.experiment.R;
 
 public class MainActivity extends Activity implements OnClickListener{
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		

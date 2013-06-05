@@ -34,19 +34,17 @@ public class SoundPlayer /*extends Activity*/ {
 	private Activity activity;
 	    
 	//Här måste vi ta emot en referens till den kontext som laddar ljuden, alltså aktiviteten
-	public SoundPlayer(Activity _activity){
+	public SoundPlayer(Activity _activity, boolean playMusic){
 		this.activity = _activity;
 		mp = MediaPlayer.create(activity, R.raw.bakgrundmusik);
 		mp.setLooping(true); // Set looping
 		mp.setVolume(50,50);
-		mp.start();
-	        
+		mp.start();			
 		soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 100);
 		soundsMap = new HashMap<Integer, Integer>();
-		soundsMap.put(SOUND1, soundPool.load(activity, R.raw.happysound, 1));
-		soundsMap.put(SOUND2, soundPool.load(activity, R.raw.sadsound, 2));
-		soundsMap.put(SOUND3, soundPool.load(activity, R.raw.clicksound, 3));		
-			
+		soundsMap.put(SOUND1, soundPool.load(activity, R.raw.happysoundkort, 1));
+		soundsMap.put(SOUND2, soundPool.load(activity, R.raw.sadsoundkort, 2));
+		soundsMap.put(SOUND3, soundPool.load(activity, R.raw.clicksound, 3));				
 	}
 
 	public void getSound(int choose){
@@ -60,5 +58,17 @@ public class SoundPlayer /*extends Activity*/ {
 		else if(choose == 3) {
 			soundPool.play(SOUND3, 5, 5, 1, 0, 1.0f);
 		} 
+	}
+	
+	public void stopBackgroundMusic(){
+		
+		mp.stop();
+		
+	}
+	
+	public void startBackgroundMusic(){
+		
+		mp.start();
+		
 	}
 }

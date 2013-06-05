@@ -56,23 +56,5 @@ public class RuleLogic {
 		return true;
 		
 	}
-	
-	public boolean getRulesForAll(ArrayList<Card> AllCards){
-		
-		for(int i = 0; i < AllCards.size(); i++){
-			for(int o = 0; o < AllCards.size(); i++){
-				if(AllCards.get(i).getCardColor()==AllCards.get(o).getCardColor()){
-					for(int p = o; p < AllCards.size(); i++){
-						if(AllCards.get(o).getCardColor() == AllCards.get(p).getCardColor()){
-							Log.i("Alla kort", "Tre lika färger finns");
-						}
-					}
-				}
-			}
-		}
-		
-		return true;
-
-	}
 }
 

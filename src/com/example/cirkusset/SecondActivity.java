@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,7 +55,9 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private PointCounter points;
 	private boolean changePlayer = true;
 	private TextView player1;
-	private TextView player2;	
+	private TextView player1dimm;
+	private TextView player2;
+	private TextView player2dimm;
 	private TextView text;
 	private VideoView mVideoView;
 	private ImageButton lollipopButton;
@@ -62,6 +65,12 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	private ImageView teamTwoUnMarked;
 	private ImageView teamOneMarked;
 	private ImageView teamTwoMarked;
+	private TextView teamOnePoints;
+	private TextView teamTwoPoints;
+	private TextView teamOnePointsDimm;
+	private TextView teamTwoPointsDimm;
+	private ImageView blinkTeamOne;
+	private ImageView blinkTeamTwo;
 	private Animation lollipopbounce;
 	private int gameCounter;
 	private MyCount counter;
@@ -126,10 +135,18 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 									points.setPlayerScore(1);
 									sounds.getSound(1);
 									onPad.getThreeCards();
-									player1 = (TextView) findViewById(R.id.spelare1);
-									player1.setText(""+points.getPlayerOneScore());
-									player2 = (TextView) findViewById(R.id.spelare2);
-									player2.setText(""+points.getPlayerTwoScore());
+									if(changePlayer == true){
+										player1 = (TextView) findViewById(R.id.spelare1);
+										player1.setText(""+points.getPlayerOneScore());
+										player2dimm = (TextView) findViewById(R.id.spelare2dimm);
+										player2dimm.setText(""+points.getPlayerTwoScore());
+									}else if(changePlayer == false){
+										player2 = (TextView) findViewById(R.id.spelare2);
+										player2.setText(""+points.getPlayerTwoScore());
+										player1dimm = (TextView) findViewById(R.id.spelare1dimm);
+										player1dimm.setText(""+points.getPlayerOneScore());	
+									}
+									
 								}else{
 									sounds.getSound(2);
 								}
@@ -141,6 +158,29 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 			}
 		}
 		});
+		
+		// Load the ImageView that will host the animation and
+		// set its background to our AnimationDrawable XML resource.
+		ImageView img = (ImageView)findViewById(R.id.scoreboardlag1);
+		img.setBackgroundResource(R.drawable.spin_animation2);
+
+		// Get the background, which has been compiled to an AnimationDrawable object.
+		AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
+
+		// Start the animation (looped playback by default).
+		frameAnimation.start();
+
+
+		// Load the ImageView that will host the animation and
+		// set its background to our AnimationDrawable XML resource.
+		ImageView img2 = (ImageView)findViewById(R.id.scoreboardlag2);
+		img2.setBackgroundResource(R.drawable.spin_animation2);
+
+		// Get the background, which has been compiled to an AnimationDrawable object.
+		AnimationDrawable frameAnimation2 = (AnimationDrawable) img2.getBackground();
+
+		// Start the animation (looped playback by default).
+		frameAnimation2.start();
 	}
 	
 	private void restart() {
@@ -151,17 +191,43 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		teamOneUnmarked = (ImageView)this.findViewById(R.id.imageView1);
 		teamTwoUnMarked = (ImageView)this.findViewById(R.id.imageView2);
 		teamTwoMarked = (ImageView)this.findViewById(R.id.imageView4);
+		teamOnePoints = (TextView)this.findViewById(R.id.spelare1);
+		teamTwoPoints = (TextView)this.findViewById(R.id.spelare2);
+		teamOnePointsDimm = (TextView)this.findViewById(R.id.spelare1dimm);
+		teamTwoPointsDimm = (TextView)this.findViewById(R.id.spelare2dimm);
+		blinkTeamOne = (ImageView)this.findViewById(R.id.scoreboardlag1);
+		blinkTeamTwo = (ImageView)this.findViewById(R.id.scoreboardlag2);
 		Log.i("PlayerKnapp", ""+changePlayer);
 		if(changePlayer){			
 			teamOneUnmarked.setAlpha(1.0f);
 			teamOneMarked.setAlpha(0f);
 			teamTwoUnMarked.setAlpha(0f);
 			teamTwoMarked.setAlpha(1.0f);
+			teamOnePoints.setAlpha(1.0f);
+			teamOnePointsDimm.setAlpha(0f);
+			teamTwoPoints.setAlpha(0f);
+			teamTwoPointsDimm.setAlpha(1.0f);
+			player1 = (TextView) findViewById(R.id.spelare1);
+			player1.setText(""+points.getPlayerOneScore());
+			player2dimm = (TextView) findViewById(R.id.spelare2dimm);
+			player2dimm.setText(""+points.getPlayerTwoScore());
+			blinkTeamOne.setAlpha(1.0f);
+			blinkTeamTwo.setAlpha(0f);
 		}else{
 			teamTwoUnMarked.setAlpha(1.0f);
 			teamTwoMarked.setAlpha(0f);
 			teamOneUnmarked.setAlpha(0f);
 			teamOneMarked.setAlpha(1.0f);
+			teamTwoPoints.setAlpha(1.0f);
+			teamTwoPointsDimm.setAlpha(0f);
+			teamOnePoints.setAlpha(0f);
+			teamOnePointsDimm.setAlpha(1.0f);
+			player2 = (TextView) findViewById(R.id.spelare2);
+			player2.setText(""+points.getPlayerTwoScore());
+			player1dimm = (TextView) findViewById(R.id.spelare1dimm);
+			player1dimm.setText(""+points.getPlayerOneScore());	
+			blinkTeamTwo.setAlpha(1.0f);
+			blinkTeamOne.setAlpha(0f);
 		}
 		points.setWhichPlayer(changePlayer);
 		counter = new MyCount(50000, 1000);

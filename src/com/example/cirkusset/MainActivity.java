@@ -2,6 +2,7 @@ package com.example.cirkusset;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -10,6 +11,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.example.Model.SoundPlayer;
 import com.example.experiment.R;
@@ -24,6 +26,17 @@ public class MainActivity extends Activity implements OnClickListener{
 		
 		ImageButton imageButton1 = (ImageButton) findViewById(R.id.imagebutton1);
 		imageButton1.setOnClickListener(this);
+		
+		// Load the ImageView that will host the animation and
+		// set its background to our AnimationDrawable XML resource.
+		ImageView img = (ImageView)findViewById(R.id.light_default);
+		img.setBackgroundResource(R.drawable.spin_animation);
+
+		// Get the background, which has been compiled to an AnimationDrawable object.
+		AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
+
+		// Start the animation (looped playback by default).
+		frameAnimation.start();
 		
 	}
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="1280dp"
     android:layout_height="800dp" 
-    android:background="@drawable/startsida4" >
+    android:background="@drawable/startsida3" >
 
     <ImageButton
         android:id="@+id/imagebutton1"
@@ -13,5 +13,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="175dp"
         android:src="@drawable/starta"/> 
+        
+    <ImageView
+		android:id="@+id/light_default"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginLeft="36dp"
+		android:layout_marginTop="26dp" />
 
 </RelativeLayout>

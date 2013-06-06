@@ -2,37 +2,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="1280dp"
     android:layout_height="800dp" 
-    android:background="@drawable/slutsida" >
+    android:background="@drawable/slutsida6" >
 
     <ImageButton
-        android:id="@+id/tillbaks"
-        android:background="@null"
+        android:id="@+id/spelaspeligen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="175dp"
-        android:src="@drawable/avsluta"/>
-
-    <TextView
-        android:id="@+id/lag2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/lag1"
-        android:layout_marginTop="290dp"
-        android:text="LagTvå" 
-        android:background="@null"/>
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="235dp"
+        android:layout_marginLeft="183dp"
+        android:background="@null"
+        android:src="@drawable/spelaigen" />
 
     <TextView
         android:id="@+id/lag1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/lag2"
-        android:layout_marginLeft="29dp"
-        android:layout_marginTop="45dp"
-        android:layout_toRightOf="@+id/tillbaks"
-        android:text="LagEtt" 
-        android:background="@null"/>
+        android:layout_above="@+id/lag2"
+        android:layout_alignLeft="@+id/lag2"
+        android:background="@null"
+        android:textColor="#B22222"
+        android:text="Lag 1 hittade 0 set!"
+        android:textSize="30sp" />
+    
+    <ImageView
+		android:id="@+id/lights_default_end"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="38dp"
+		android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/lag2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="137dp"
+        android:layout_toRightOf="@+id/spelaspeligen"
+        android:background="@null"
+        android:text="Lag 2 hittade 0 set!"
+        android:textColor="#66CD00"
+        android:textSize="30sp" />
 
 </RelativeLayout>

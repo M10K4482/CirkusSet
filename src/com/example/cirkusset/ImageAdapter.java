@@ -1,3 +1,9 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.cirkusset;
 
 import java.util.ArrayList;
@@ -5,7 +11,7 @@ import java.util.ArrayList;
 import com.example.Model.Card;
 import com.example.Model.CardsOnPad;
 import com.example.Model.Deck;
-import com.example.experiment.R;
+import com.example.CirkusSetApp.R;
 
 import android.content.Context;
 import android.util.Log;
@@ -19,17 +25,22 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class ImageAdapter extends BaseAdapter {
-	Context context; //Denna referens till Context fungerar genom att "pï¿½minna" programmet om vad som hï¿½nt. Typ. 
-	private CardsOnPad onPad; //Referens till de kort som skall vara pï¿½ paddan, alltsï¿½ en referens till klassen CardsOnPad 
-    public ImageAdapter(Context c, CardsOnPad onPad) { // Konstruktor som tar emot och "Startar" info om context och onPad
+	
+	Context context; 
+	private CardsOnPad onPad; 
+	
+	/**En konstruktor för att initialisera bland annat vår context och vår referens till CardsOnPad*/
+    public ImageAdapter(Context c, CardsOnPad onPad) { 
     	
+    	/**Ge våra variabler värden*/
     	this.context = c; 
-    	this.onPad = onPad; //Samma lista som i GridTestActivity.
+    	this.onPad = onPad; 
 
     }
 
+    /**Tre nödvändiga metoder för en imageAdapter klass, dessa tre skickar tillbaks lite data klassen använder sig av*/   
 	@Override
-	public int getCount() { //Metod fï¿½r att fï¿½ antalet kort
+	public int getCount() { 
 		
 		Log.i("Cirkus","Antal kort: "+ onPad.getCards().size());
 		return onPad.getCards().size();
@@ -37,7 +48,7 @@ public class ImageAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Object getItem(int position) { //Logga position fï¿½r ett kort
+	public Object getItem(int position) { 
 		
 		Log.i("Cirkus","In getItem" + position);
 		return 0;
@@ -45,30 +56,32 @@ public class ImageAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public long getItemId(int position) {
+	public long getItemId(int position) {	
 		
 		Log.i("Cirkus","In getItemId");
-		return 0;
+		return 0;		
 		
 	}
 
+	/**En view metod för att rita ut brädet*/
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) { //Denna kï¿½rs fï¿½r varje ruta pï¿½ spelplanen
+	public View getView(int position, View convertView, ViewGroup parent) { 
 		
-		ImageView imageView; //Vï¿½r imageview som anvï¿½nds fï¿½r att visa bilderna
-        if (convertView == null) {  //if it's not recycled, initialize some attributes
-            imageView = new ImageView(context); //Koppla vï¿½r context (pï¿½minnelse-grej) med imageviewen
-            imageView.setLayoutParams(new GridView.LayoutParams(250, 173)); //Hï¿½r skapar vi det nya elementet med GridView
-            imageView.setScaleType(ImageView.ScaleType.FIT_START);  //Centrera de bilder vi lï¿½gger in
-            imageView.setPadding(5, 5, 5, 5); //Fluff
+		ImageView imageView; 
+        if (convertView == null) {  
+            imageView = new ImageView(context); 
+            imageView.setLayoutParams(new GridView.LayoutParams(250, 173)); 
+            imageView.setScaleType(ImageView.ScaleType.FIT_START);  
+            imageView.setPadding(5, 5, 5, 5);
         } else {
-            imageView = (ImageView) convertView; // Om inget har ï¿½ndrats ï¿½teranvï¿½nder vi gammal bild
+            imageView = (ImageView) convertView; 
         }
         
-         Card ca = onPad.getCard(position); //Skapa en Card-klass referens (c) och ge den vï¿½ra kort frï¿½n CardsOnPad klassen
-         imageView.setImageResource(ca.getCardImage()); //Hï¿½R lï¿½gger vi in vï¿½ra kort i imageviewen
+        /**Kalla på de kort som ska ritas ut på brädet via onPad och rita ut dem i imageViewen*/
+        Card ca = onPad.getCard(position); 
+        imageView.setImageResource(ca.getCardImage()); 
          
-         return imageView;
+        return imageView;
 
 	}  
 }

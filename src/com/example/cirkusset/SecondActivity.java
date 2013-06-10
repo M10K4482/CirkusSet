@@ -1,5 +1,11 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.cirkusset;
-//Testar github 6/3
+
 import com.example.cirkusset.MainActivity;
 
 import com.example.Model.Card;
@@ -9,11 +15,11 @@ import com.example.Model.Deck;
 import com.example.Model.PointCounter;
 import com.example.Model.RuleLogic;
 import com.example.Model.SoundPlayer;
-import com.example.experiment.R;
-import com.example.experiment.R.anim;
-import com.example.experiment.R.id;
-import com.example.experiment.R.layout;
-import com.example.experiment.R.raw;
+import com.example.CirkusSetApp.R;
+import com.example.CirkusSetApp.R.anim;
+import com.example.CirkusSetApp.R.id;
+import com.example.CirkusSetApp.R.layout;
+import com.example.CirkusSetApp.R.raw;
 
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
@@ -43,9 +49,10 @@ import android.widget.VideoView;
 
 public class SecondActivity extends Activity implements OnCompletionListener{
 	
-	private GridView gr; //Skapa en referens (gridview)
-	private ImageAdapter im; //Skapa en referens (im) så att man kan komma åt ImageAdapter klassen
-	private CardsOnPad onPad; //Referens till de kort som skall vara på paddan 
+	/*En massa variabler för kommande grejjer*/
+	private GridView gr; 
+	private ImageAdapter im; 
+	private CardsOnPad onPad; 
 	private RuleLogic logic;
 	private int cardCounter;
 	private static int PRESSED_LIMIT = 3;
@@ -80,22 +87,23 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 	protected void onCreate(Bundle savedInstanceState) {
 			
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_grid_test); //Sätt layouten som content för appen
-		gameCounter = 0;
-		points = new PointCounter();
-		mVideoView = (VideoView) findViewById(R.id.surface_view);
-		lollipopButton = (ImageButton) findViewById(R.id.imageButton2);
+		setContentView(R.layout.activity_second);
+		gameCounter = 0; //En räknare för att räkna totallt antal rundor
+		points = new PointCounter(); //Referens till poängräknar-klassen
+		mVideoView = (VideoView) findViewById(R.id.surface_view); //Används för att spela videon
+		lollipopButton = (ImageButton) findViewById(R.id.imageButton2); //Knappen för att starta nästa lags runda
 		mVideoView.setOnCompletionListener(this);
 		lollipopbounce = AnimationUtils.loadAnimation(this, R.anim.lollipopbounce);
-		restart();
+		restart(); //Kör igång metod med tidräknare
 		
+		/*Shuffle-knappen med en klick-lyssnare*/
 		this.shuffleButton = (ImageButton)this.findViewById(R.id.imageButton1);
 		this.shuffleButton.setOnClickListener(new OnClickListener() {
 		    @Override
 		    public void onClick(View v) {
-		    	decreaseTime();
-		    	onPad.getNewHand();
-		    	im.notifyDataSetChanged();
+		    	decreaseTime(); //Kalla på metoden för att minska tiden varje gång man trycker på shuffle-knappen
+		    	onPad.getNewHand(); //Byt alla korten på brädet
+		    	im.notifyDataSetChanged(); //Rita om brädet
 		    }
 		});
 		
@@ -104,38 +112,49 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		im = new ImageAdapter(this,onPad); //Skicka CardsOnPad referensen onPad till ImageAdapters konstruktor
 		logic = new RuleLogic();
 		gr.setAdapter(im); //Skapa adapter skicka in våra kort 
-		sounds = new SoundPlayer(this, true);
+		sounds = new SoundPlayer(this, true); //Kör igång ljudet
 		points = new PointCounter();
 				
 		gr.setOnItemClickListener(new OnItemClickListener() { //Kolla efter "Klick" med OnItemClickListener() och koppla till gridviewen
 					
-		public void onItemClick(AdapterView<?> parent, View v, int position, long id) { //Denna kï¿½r igï¿½ng nï¿½r man klickat nï¿½got och anvï¿½nder sig av en adaptor
-			cardCounter = 0;
-			Card ca = onPad.getCard(position); //Hï¿½mta kortet som klickats via dess position pï¿½ brï¿½det
+		/*Denna kör igång när man klickat något i gridViewen*/
+		public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+			cardCounter = 0; //En räknare för antal nertryckta kort
+			Card ca = onPad.getCard(position); //Hämta kortet som klickats via dess position på brädet
 			ca.pressCard(); //Tryck in kortet och byt dess bild
-			sounds.getSound(3);
-			im.notifyDataSetChanged();
-					
+			sounds.getSound(3); //Spela "klick"-ljud när något klickas i gridViewen
+			im.notifyDataSetChanged(); //Rita om brädet
+			
+			/*Kod som kollar om ett set är rätt eller fel.*/
 			for(int i = 0; i < onPad.getCards().size(); i++){	
 				if(onPad.getCard(i).isPressed()==true){	
-					cardCounter += 1;
-					if(cardCounter == PRESSED_LIMIT){
-						new CountDownTimer(200, 1000){
-							public void onTick(long millisUntilFinished){
-								
+					cardCounter += 1; //Varje gång ett kort är klickat så plussa på ett 
+					if(cardCounter == PRESSED_LIMIT){ //Om antal klickade kort är lika med tre så gå vidare
+						new CountDownTimer(200, 1000){ //Gör en lite paus så att man hinner se att det tredje kortet klickas ner
+							
+							public void onTick(long millisUntilFinished){			
 							}
+							
+							/**När tiden för pausen är slut så kör vidare i denna onFinish metod*/
 							public void onFinish(){
-								setCards = logic.getRules(onPad.getPressedCards());				
-								for(int a = 0; a < onPad.getCards().size(); a++){
+								
+								setCards = logic.getRules(onPad.getPressedCards()); //Anropa klassen med regler och skicka med de tre klickade korten	
+								
+								/*Efter det så gå igenom korten och "avklicka" de som är klickade*/
+								for(int a = 0; a < onPad.getCards().size(); a++){ 
 									if(onPad.getCard(a).isPressed()==true){						
 										onPad.getCard(a).pressCard();					
 									}
-								}		
+									
+								}	
+								
+								/*Är korten som klickats ett sett så gå in här*/
 								if(setCards == true){
-									points.setPlayerScore(1);
-									sounds.getSound(1);
-									onPad.getThreeCards();
-									if(changePlayer == true){
+									points.setPlayerScore(1); //Ge rätt spelare ett poäng
+									sounds.getSound(1); //Spela ett vinnare-ljud
+									onPad.getThreeCards(); //Ersätt setet med tre nya kort
+									/*Beroende på om changePlayer är true eller false så ska olika grejjer i grafiken "tändas" eller "släckas"*/
+									if(changePlayer == true){ 
 										player1 = (TextView) findViewById(R.id.spelare1);
 										player1.setText(""+points.getPlayerOneScore());
 										player2dimm = (TextView) findViewById(R.id.spelare2dimm);
@@ -148,9 +167,9 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 									}
 									
 								}else{
-									sounds.getSound(2);
+									sounds.getSound(2); //Är det inte ett set så spela ett förlorar-ljud
 								}
-								im.notifyDataSetChanged();
+								im.notifyDataSetChanged(); //Rita om brädet
 							}
 					}.start();
 					}	
@@ -159,31 +178,22 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		}
 		});
 		
-		// Load the ImageView that will host the animation and
-		// set its background to our AnimationDrawable XML resource.
+		/*Kod som sköter blinkandet av lyktor runt poängräknarna*/
 		ImageView img = (ImageView)findViewById(R.id.scoreboardlag1);
 		img.setBackgroundResource(R.drawable.spin_animation2);
-
-		// Get the background, which has been compiled to an AnimationDrawable object.
 		AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
-
-		// Start the animation (looped playback by default).
 		frameAnimation.start();
-
-
-		// Load the ImageView that will host the animation and
-		// set its background to our AnimationDrawable XML resource.
 		ImageView img2 = (ImageView)findViewById(R.id.scoreboardlag2);
 		img2.setBackgroundResource(R.drawable.spin_animation2);
-
-		// Get the background, which has been compiled to an AnimationDrawable object.
 		AnimationDrawable frameAnimation2 = (AnimationDrawable) img2.getBackground();
-
-		// Start the animation (looped playback by default).
 		frameAnimation2.start();
+		
 	}
 	
+	/**En metod som, berodende på vilken spelare som är vald, aktiverar och avaktiverar olika 
+	 * grafiska grejjer samt kör igång tid-nedräkningen*/
 	private void restart() {
+		
 		mVideoView.setVisibility(VideoView.INVISIBLE);
 		lollipopButton.setAlpha(0f);
 		lollipopButton.setClickable(false);
@@ -197,7 +207,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		teamTwoPointsDimm = (TextView)this.findViewById(R.id.spelare2dimm);
 		blinkTeamOne = (ImageView)this.findViewById(R.id.scoreboardlag1);
 		blinkTeamTwo = (ImageView)this.findViewById(R.id.scoreboardlag2);
-		Log.i("PlayerKnapp", ""+changePlayer);
+		
 		if(changePlayer){			
 			teamOneUnmarked.setAlpha(1.0f);
 			teamOneMarked.setAlpha(0f);
@@ -229,11 +239,14 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 			blinkTeamTwo.setAlpha(1.0f);
 			blinkTeamOne.setAlpha(0f);
 		}
-		points.setWhichPlayer(changePlayer);
-		counter = new MyCount(50000, 1000);
-		counter.start();
+		
+		points.setWhichPlayer(changePlayer); //Sätter vilken spelare som ska få poäng
+		counter = new MyCount(50000, 1000); //Sätter upp ett objekt för att räkna tiden
+		counter.start(); //Startar nedräkningen
+		
 	}
-	//Videospelaren for animationen
+	
+	/**En metod för att spela upp "byte lag"-videon*/
 	private void runvideo() {
 		mVideoView.setVisibility(VideoView.VISIBLE);
 		mVideoView = (VideoView) findViewById(R.id.surface_view);
@@ -244,6 +257,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		mVideoView.start();
 	}
 
+	/**En metod för att minska tiden vid varje shuffling*/
 	public void decreaseTime(){
 		newTime = newTime - 10000;
 		counter.cancel();
@@ -251,27 +265,32 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		counter.start();	
 	}
 	
+	/**Metod för att pausa ljudet när man lämmnar spelet*/
 	@Override
 	protected void onPause(){
 		super.onPause();
 		sounds.stopBackgroundMusic();
 	}
 	
+	/**Metod för att fortsätta ljudet när man fortsätter spelet*/
 	@Override
 	protected void onResume() {
 		super.onResume();
 		sounds.startBackgroundMusic();
 	}
 
-	// RäknarN
+	/**Metod för tidräknaren*/
 	public class MyCount extends CountDownTimer {
 		public MyCount(long millisInFuture, long countDownInterval) {
 			super(millisInFuture, countDownInterval);
 		}
-		//Nar tiden ar ute sa spelas filmen o knappen dyker upp
+		
+		/**Metod som när tiden ar ute sa spelas bla. filmen o knappen dyker upp*/
 		@Override
 		public void onFinish() {
 			text.setText("0");
+			/*Om gameCounter blivit fem (alltså att fem rundor förflutit) så starta en ny intent 
+			 * för den sista sidan och gå till denna istället*/
 			if(gameCounter == 5) {
 				Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
 				intent.putExtra("input1", Integer.toString(points.getPlayerOneScore()));
@@ -280,18 +299,19 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 				overridePendingTransition(R.anim.bottomin, R.anim.topout);
 				finish();
 			}else{
-				gameCounter++;
+				gameCounter++; //Om gameCounter inte blivit fem (alltså att fem rundor inte förflutit) så plussa på gameCounter
 			}
-			shuffleButton.setClickable(false);
+			shuffleButton.setClickable(false); //Gör så att man inte kan råka trycka ner shuffleButton
 			shuffleButton.setAlpha(0f);
+			/*Om det inte redan gjorts så avtryck nedtryckta kort*/
 			for(int i = 0; i < onPad.getCards().size(); i++){	
 				if(onPad.getCard(i).isPressed()==true){
 				onPad.getCard(i).pressCard();	
 				}
 			}
-			im.notifyDataSetChanged();
-			gr.setClickable(false);
-			runvideo();
+			im.notifyDataSetChanged(); //Rita om brädet
+			gr.setClickable(false);  //Gör GridViewen oklickbar tillsvidare
+			runvideo(); //Spela upp video
 		}
 
 		@Override
@@ -308,7 +328,7 @@ public class SecondActivity extends Activity implements OnCompletionListener{
 		lollipopButton.setClickable(true);
 	}
 	
-	//Nar man trycker pa spela-knappen onClick du vet
+	/**Metod för när man trycker på "nästa-lags-tur" knappen, byter bland annat changePlayer till true/false*/
 	public void restartClick(View v) {
 		shuffleButton.setClickable(true);
 		shuffleButton.setAlpha(1.0f);

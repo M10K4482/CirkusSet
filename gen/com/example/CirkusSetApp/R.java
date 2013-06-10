@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.example.experiment;
+package com.example.CirkusSetApp;
 
 public final class R {
     public static final class anim {
@@ -221,36 +221,36 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f0a001b;
-        public static final int clock=0x7f0a0014;
-        public static final int clock_stand=0x7f0a0013;
-        public static final int gridviewTest=0x7f0a0003;
-        public static final int imageButton1=0x7f0a000c;
-        public static final int imageButton2=0x7f0a0005;
-        public static final int imageView1=0x7f0a0007;
-        public static final int imageView2=0x7f0a000e;
-        public static final int imageView3=0x7f0a0008;
-        public static final int imageView4=0x7f0a000f;
-        public static final int imagebutton1=0x7f0a0015;
-        public static final int korten=0x7f0a0001;
-        public static final int lag1=0x7f0a0019;
-        public static final int lag2=0x7f0a0018;
-        public static final int light_default=0x7f0a0016;
+        public static final int clock=0x7f0a0016;
+        public static final int clock_stand=0x7f0a0015;
+        public static final int gridviewTest=0x7f0a0005;
+        public static final int imageButton1=0x7f0a000e;
+        public static final int imageButton2=0x7f0a0007;
+        public static final int imageView1=0x7f0a0009;
+        public static final int imageView2=0x7f0a0010;
+        public static final int imageView3=0x7f0a000a;
+        public static final int imageView4=0x7f0a0011;
+        public static final int imagebutton1=0x7f0a0000;
+        public static final int korten=0x7f0a0003;
+        public static final int lag1=0x7f0a0018;
+        public static final int lag2=0x7f0a0019;
+        public static final int light_default=0x7f0a0001;
         public static final int lights_default_end=0x7f0a001a;
-        public static final int relative_test=0x7f0a0000;
-        public static final int right=0x7f0a0006;
-        public static final int right2=0x7f0a000d;
-        public static final int scoreboardlag1=0x7f0a0009;
-        public static final int scoreboardlag2=0x7f0a0010;
-        public static final int spela=0x7f0a0002;
-        public static final int spelare1=0x7f0a000a;
-        public static final int spelare1dimm=0x7f0a000b;
-        public static final int spelare2=0x7f0a0011;
-        public static final int spelare2dimm=0x7f0a0012;
+        public static final int relative_test=0x7f0a0002;
+        public static final int right=0x7f0a0008;
+        public static final int right2=0x7f0a000f;
+        public static final int scoreboardlag1=0x7f0a000b;
+        public static final int scoreboardlag2=0x7f0a0012;
+        public static final int spela=0x7f0a0004;
+        public static final int spelare1=0x7f0a000c;
+        public static final int spelare1dimm=0x7f0a000d;
+        public static final int spelare2=0x7f0a0013;
+        public static final int spelare2dimm=0x7f0a0014;
         public static final int spelaspeligen=0x7f0a0017;
-        public static final int surface_view=0x7f0a0004;
+        public static final int surface_view=0x7f0a0006;
     }
     public static final class layout {
-        public static final int activity_grid_test=0x7f030000;
+        public static final int activity_first=0x7f030000;
         public static final int activity_second=0x7f030001;
         public static final int activity_third=0x7f030002;
     }

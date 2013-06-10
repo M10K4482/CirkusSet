@@ -1,9 +1,13 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.Model;
 
 import java.util.HashMap;
-
-import com.example.experiment.R;
-
+import com.example.CirkusSetApp.R;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -15,15 +19,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-/*
- * Ni vill nog inte göra en till aktivitet här, ljuden skall ju spelas i en annan
- * aktivitet (MainActivity) - gör ni en ny så får ni en hel hög med andra problem.
- * 
- * (Egentligen tycker jag inte att ni skall lösa det med en extra ljudklass, att
- * skapa referenser till contexten fram och tillbaka öppnar upp för stora missenläckor
- * och oväntade krasher, men OK)
- */
-public class SoundPlayer /*extends Activity*/ {
+public class SoundPlayer {
 	
 	private MediaPlayer mp;
 	private SoundPool soundPool;
@@ -33,11 +29,11 @@ public class SoundPlayer /*extends Activity*/ {
 	private int SOUND3 = 3;
 	private Activity activity;
 	    
-	//Här måste vi ta emot en referens till den kontext som laddar ljuden, alltså aktiviteten
+	//Här tas emot en referens till den kontext som laddar ljuden, alltså aktiviteten
 	public SoundPlayer(Activity _activity, boolean playMusic){
 		this.activity = _activity;
 		mp = MediaPlayer.create(activity, R.raw.bakgrundmusik);
-		mp.setLooping(true); // Set looping
+		mp.setLooping(true);
 		mp.setVolume(50,50);
 		mp.start();			
 		soundPool = new SoundPool(2, AudioManager.STREAM_MUSIC, 100);

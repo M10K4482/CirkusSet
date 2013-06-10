@@ -1,30 +1,30 @@
-package com.example.Model;
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
 
-import com.example.Model.Card.CardAmount;
-import com.example.Model.Card.CardAnimal;
-import com.example.Model.Card.CardColor;
-import com.example.Model.Card.CardFill;
+package com.example.Model;
 
 public class Card {
 	
-	//Fï¿½rdelen med detta ï¿½r att man bara kan avï¿½nda dessa orden sï¿½ att det inte kan bli missfï¿½rstï¿½nd. Lï¿½s om enum
-	public static enum CardAnimal{LION,APE,SEAL}; //Anvï¿½nds fï¿½r att beskriva varje korts typ av djur
-	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Anvï¿½nds fï¿½r att beskriva varje korts bakgrund
-	public static enum CardAmount{ONE,TWO,THREE}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
-	public static enum CardColor{PINK,TURQUOIS,GREEN}; //Anvï¿½nds fï¿½r att beskriva varje korts antal av djur
+	public static enum CardAnimal{LION,APE,SEAL}; //Används för att beskriva varje korts typ av djur
+	public static enum CardFill{CLEAN,DOTS,STRIPES}; //Används för att beskriva varje korts bakgrund
+	public static enum CardAmount{ONE,TWO,THREE}; //Används för att beskriva varje korts antal av djur
+	public static enum CardColor{PINK,TURQUOIS,GREEN}; //Används för att beskriva varje korts antal av djur
 	
-	private int cardPressed; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett nertryckt kort
-	private int cardNormal; //Ett vï¿½rde som kommer anvï¿½ndas fï¿½r att spara id fï¿½r ett normallt kort
-	private CardFill fill; //Hï¿½r sï¿½ger vi att vi bara accepterar vï¿½ra fyllnader
+	private int cardPressed; //Ett värde som kommer användas för att spara id för ett nertryckt kort
+	private int cardNormal; //Ett värde som kommer användas för att spara id för ett normallt kort
+	private CardFill fill; //Här säger vi att vi bara accepterar våa fyllnader
 	private CardAnimal animal;
 	private CardAmount amount;
 	private CardColor color;
-    private boolean isPressed; //En true/false fï¿½r att senare kunna avgï¿½ra om ett kort tryckts eller ej
+    private boolean isPressed; //En true/false för att senare kunna avgöra om ett kort tryckts eller ej
     
-	/**En konstruktor dï¿½r man skapar ett kort och sparar bilder (eller r.id.xx fï¿½r bilderna) samt typen av bild*/
+	/**En konstruktor där man skapar ett kort och sparar bilder*/
 	public Card(int cardNormal, int cardPressed, CardFill fill, CardAnimal animal, CardColor color, CardAmount amount) {
 
-		//lagra i privata instansvariabler
+		/*Lagra i privata instansvariabler*/
 		this.cardNormal = cardNormal;
 		this.cardPressed = cardPressed;
 		this.animal = animal;
@@ -34,7 +34,8 @@ public class Card {
 		
 	}
 
-	public int getCardImage() { //Hï¿½r sï¿½tts bilden (tryckt eller normal) som ska ritas ut fï¿½r ett visst kort	
+	/**I denna metod sätts bilden (tryckt eller normal) som ska ritas ut för ett visst kort och returneras*/
+	public int getCardImage() {	
 		int cardImage = cardNormal;
 		if (isPressed){
 			cardImage = cardPressed;
@@ -42,7 +43,7 @@ public class Card {
 		return cardImage;	
 	}
 	
-	//Dessa "get..." metoder anvï¿½nds fï¿½r att returnera typerna fï¿½r varje objekt (kort alltsï¿½)
+	/**Dessa "get..." metoder används för att returnera typerna för varje objekt (kort alltså)*/
 	public CardFill getCardFill() {
 		return fill;
 	}
@@ -59,12 +60,13 @@ public class Card {
 		return color;
 	}
 	
-	public void pressCard(){ //Nï¿½r ett kort trycks anropas denna metod fï¿½r det tryckta objektet (kortet)	
-		isPressed =! isPressed; //Byter true och false beroende pï¿½ vad det fï¿½r tillfï¿½llet ï¿½r 
+	/**När ett kort trycks anropas denna metod för det tryckta objektet (kortet)*/
+	public void pressCard(){	
+		isPressed =! isPressed; //Byter true och false beroende på vad det för tillfället är 
 	}
 
-	public boolean isPressed(){ //Returnera true/false 
-		return isPressed;
+	public boolean isPressed(){ 
+		return isPressed; //Returnera true/false
 	}
 	
 }

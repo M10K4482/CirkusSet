@@ -1,3 +1,9 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.cirkusset;
 
 import android.app.Activity;
@@ -15,7 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.Model.SoundPlayer;
-import com.example.experiment.R;
+import com.example.CirkusSetApp.R;
 
 public class ThirdActivity extends Activity implements OnClickListener{
 	
@@ -37,15 +43,10 @@ public class ThirdActivity extends Activity implements OnClickListener{
 		ImageButton spelaigen = (ImageButton) findViewById(R.id.spelaspeligen);
 		spelaigen.setOnClickListener(this);
 		
-		// Load the ImageView that will host the animation and
-		// set its background to our AnimationDrawable XML resource.
+		/*Kod för grafiken på sista sidan*/
 		ImageView img3 = (ImageView)findViewById(R.id.lights_default_end);
 		img3.setBackgroundResource(R.drawable.spin_animation);
-
-		// Get the background, which has been compiled to an AnimationDrawable object.
 		AnimationDrawable frameAnimation3 = (AnimationDrawable) img3.getBackground();
-
-		// Start the animation (looped playback by default).
 		frameAnimation3.start();
 	    
 	}

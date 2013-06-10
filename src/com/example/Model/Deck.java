@@ -1,18 +1,26 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.Model;
 
-import com.example.experiment.R;
+import com.example.CirkusSetApp.R;
 import java.util.ArrayList;
 import java.util.Collections;
-
 import android.util.Log;
 
-//Class that handles a deck of cards
+/**Klass där korten skapas och hanteras*/
 public class Deck {
+	
 	private ArrayList<Card> myDeck;
-	ArrayList<Card> c;
+	ArrayList<Card> returnDeck;
+	
+	/**Konstruktor där alla korten och deras attribut läggs in, en efter en*/
 	public Deck() {
 		
-		c = new ArrayList<Card>();
+		returnDeck = new ArrayList<Card>();
 		myDeck = new ArrayList<Card>();	
 		//Skapa alla korten
 		
@@ -138,65 +146,62 @@ public class Deck {
 
 	}
 	
-	public void shuffle(){ //Här blandas kortleken
+	/**Metod där korten blandas*/
+	public void shuffle(){ 
 		
 		Collections.shuffle(myDeck);
 		
 	}
 	
+	/**Metod där kort läggs till i returnDeck och tas bort ur myDeck för att kunna returneras ochvisas i gridViewen*/
 	public ArrayList<Card> getNbrOfCards(int nbr){
-		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
-		//Lï¿½gger fï¿½rst till kort
 		
-		if(myDeck.size() <= 8){
-			
-			reloadDeck();
-			
+		if(myDeck.size() <= 8){	
+			reloadDeck();	
 		}
 		
-		c.removeAll(c);		
+		returnDeck.removeAll(returnDeck);		
 		
 		for(int insert = 0; insert < nbr; insert++){
-			c.add(myDeck.get(insert));
+			returnDeck.add(myDeck.get(insert));
 		}
 		
 		for(int firstArray = 0; firstArray < nbr; firstArray++){
 			for(int secondArray = 0; secondArray < myDeck.size(); secondArray++){
-				if(myDeck.get(secondArray).equals(c.get(firstArray))){
-					Log.i("BORTA", ""+secondArray);
+				if(myDeck.get(secondArray).equals(returnDeck.get(firstArray))){
 					myDeck.remove(secondArray);	
 				}
 			}
 		}
-		return c;
+		
+		return returnDeck;
+		
 	}
 	
+	/**Metod där tre nya kort läggs till i returnDeck, tas bort ur myDeck och sedan returneras*/
 	public ArrayList<Card> getThreeNewCards(ArrayList<Card> pressedCards){
-		//Hï¿½r lï¿½gger man till och tar bort kort frï¿½n brï¿½det
-		//Lï¿½gger fï¿½rst till kort
 		
-		if(myDeck.size() <= 3){
-			
-			reloadDeck();
-			
+		if(myDeck.size() <= 3){	
+			reloadDeck();	
 		}
 		
 		for(int pressed = 0; pressed < pressedCards.size(); pressed++){
-			for(int exchange = 0; exchange < c.size(); exchange++){
-				if(c.get(exchange).equals(pressedCards.get(pressed))){
+			for(int exchange = 0; exchange < returnDeck.size(); exchange++){
+				if(returnDeck.get(exchange).equals(pressedCards.get(pressed))){
 				
-					c.remove(exchange);
-					c.add(exchange, myDeck.get(0));
+					returnDeck.remove(exchange);
+					returnDeck.add(exchange, myDeck.get(0));
 					myDeck.remove(0);
 					
 				}
 			}
 		}
 		
-		return c;
+		return returnDeck;
 		
 	}
 	
+	/**Metod där alla korten åter igen laddas in i myDeck arrayen för att undvika nullpointer*/
 	public void reloadDeck(){		
 		
 		//FIRST DECK-CARDS:

@@ -1,10 +1,14 @@
+/**Namn: CirkusSet
+ * Skapare: Mark Wibom, Max Moberg, Annebell Larsson, Andrea Edström, 
+ * Daniel Sofinet, Maja Mercedes Boström, Alexander Moe Ditlevsen 
+ * Programm: IDK12
+ * Kurs: Programmering för interaktionsdesign 3: Mobila appar*/
+
 package com.example.Model;
 
 import java.util.ArrayList;
-
 import android.util.Log;
-
-import com.example.experiment.R;
+import com.example.CirkusSetApp.R;
 
 public class RuleLogic {
 	
